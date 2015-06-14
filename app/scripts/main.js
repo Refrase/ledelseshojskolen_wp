@@ -3,17 +3,9 @@ $(document).ready(function() {
 'use strict';
 
 	// Opdatér aktivt link i nav med .active state
-	$(".nav a").on("click", function(){
-    $(".nav").find(".active").removeClass("active");
-    $(this).parent().addClass("active");
-	});
-
-	// Luk dropdown responsive nav, når der trykkes på link
-	$('navbar a').click(function() {
-		var navbarToggle = $('.navbar-toggle');
-		if (navbarToggle.is(':visible')) {
-			navbarToggle.trigger('click');
-		}
+	$( '.nav a' ).on( 'click' , function(){
+    $( '.nav' ).find( '.active' ).removeClass( 'active' );
+    $(this).parent().addClass( 'active' );
 	});
 
 	// Animér scroll til #-link
@@ -31,6 +23,18 @@ $(document).ready(function() {
 	    }
 	  });
 	});
+
+	// Luk dropdown responsive nav, når der trykkes på link
+	$( '.navbar-nav a' ).click(function() {
+	    var navbarToggle = $( '.navbar-toggle' );
+	    if ( navbarToggle.is( ':visible' ) ) {
+	        navbarToggle.trigger( 'click' );
+	    }
+	});
+	// ... og når man klikker udenfor dropdown-menuen
+	$(document).on('click',function(){
+		$( '.collapse' ).collapse( 'hide' );
+	})
 
 	// Fuldskærmsvideo
 	$(function(){

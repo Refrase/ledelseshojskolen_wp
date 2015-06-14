@@ -6,7 +6,7 @@
   margin: 0; }
 
 .navbar-default {
-	background: $clr-sec3-rgba2; }
+	background: $clr-pri1; }
 
 .nav {
 	position: relative;
@@ -16,31 +16,57 @@
 .navbar-brand,
 .navbar-default .navbar-left > li > a {
 	font-size: 20px;
-	font-weight: 600; }
+	font-weight: 500;
+	font-style: italic; }
 
 .navbar > .container-fluid .navbar-brand,
 .navbar > .container-fluid .navbar-brand-wide,
 .navbar-default .navbar-nav > li > a {
-	color: $clr-sec1; }
+	color: $clr-sec3; }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > li > a:hover  {
-	border-bottom: 4px solid $clr-pri2;
-	background: none; }
+	color: $clr-sec3;
+	background: $clr-pri1-sha1; }
 
 .navbar-default .navbar-left > li > a:hover {
 	border: none; }
 
 // PF-link
-.navbar-default .navbar-right > li > a {
-	color: $clr-sec2; }
-
-.navbar-default .navbar-right > li > a:hover {
-	color: $clr-sec2; }
+.navbar-right {
+	position: absolute;
+	right: $dist-m;
+	bottom: 0; }
 
 .navbar-default .navbar-right > li > a > img {
-	height: 16px;
-	padding-bottom: 4px;
-	padding-left: 4px; }
+	height: 20px; }
+
+@media ( max-width: $grid-float-breakpoint ) { // set in main.scss
+	.navbar-right {
+		position: relative;
+		right: 0; }
+}
+
+// Navbar-toggle (btn)
+.navbar-default .navbar-toggle {
+	border: none;
+	padding: $dist-m;
+	padding-bottom: 17px;
+	margin: 0;
+	border-radius: 0; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color : $clr-pri1-sha1; }
+
+.navbar-default .navbar-toggle .icon-bar {
+	height: 3px;
+	background-color: $clr-sec3; }
+
+// Navbar collapse
+.navbar-default .navbar-collapse {
+	padding: 0;
+	border-top: 0;
+  box-shadow: none; }
