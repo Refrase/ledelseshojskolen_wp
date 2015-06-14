@@ -1,6 +1,12 @@
 $(document).ready(function() {
 
-'use strict'; // Grunt kræver dette for build uden errors?!
+'use strict';
+
+	// Opdatér aktivt link i nav med .active state
+	$(".nav a").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+	});
 
 	// Luk dropdown responsive nav, når der trykkes på link
 	$('navbar a').click(function() {
@@ -28,14 +34,14 @@ $(document).ready(function() {
 
 	// Fuldskærmsvideo
 	$(function(){
-	  $('#video-intro').css({
+	  $('#videoIntro').css({
 	  	width: $(window).innerWidth() + 'px',
 	  	height: $(window).innerWidth()*0.56 + 'px'
 	  });
 
 	  // Behold fuld skærm ved ændring af vinduestr.
 	  $(window).resize(function(){
-	    $('#video-intro').css({
+	    $('#videoIntro').css({
 	    	width: $(window).innerWidth() + 'px',
 	    	height: $(window).innerWidth()*0.56 + 'px'
 	    });

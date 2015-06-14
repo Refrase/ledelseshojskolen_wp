@@ -44,12 +44,3 @@
 	height: 16px;
 	padding-bottom: 4px;
 	padding-left: 4px; }
-
-// Media Queries
-@media (min-width: 768px) {
-	.navbar-brand {
-		display: none; }}
-
-@media (max-width: 768px) {
-	.navbar-left {
-		display: none; }}
