@@ -16,8 +16,7 @@
 .navbar-brand,
 .navbar-default .navbar-left > li > a {
 	font-size: 20px;
-	font-weight: 500;
-	font-style: italic; }
+	font-weight: 500; }
 
 .navbar > .container-fluid .navbar-brand,
 .navbar > .container-fluid .navbar-brand-wide,
@@ -39,6 +38,9 @@
 	position: absolute;
 	right: $dist-m;
 	bottom: 0; }
+
+.navbar-right .pf-link {
+	padding-left: 18px; }
 
 .navbar-default .navbar-right > li > a > img {
 	height: 20px; }

@@ -1,17 +1,17 @@
 /* ----- Intro ----- */
 
 .intro {
-	background:
-	  linear-gradient($clr-pri2-rgba1, $clr-pri2-rgba1),
-		url(../images/sagnland001_sh.jpg) no-repeat top;
-	background-size: cover; }
+	background: url(../images/mark.jpg) no-repeat center;
+	background-size: cover;
+	padding-bottom: $dist-xxxl; }
 
 .row-intro img {
 	position: relative;
 	display: block;
-	width: 64px;
+	width: 56px;
 	margin: 0 auto; }
 
-.row-intro h1 {
+.row-intro h1,
+.row-intro h3,  {
 	text-align: center;
-	color: $clr-sec3; }
+	color: $clr-sec1; }

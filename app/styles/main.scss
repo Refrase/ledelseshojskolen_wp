@@ -1,6 +1,6 @@
 /* ----- Fra Yeoman-build ----- */
 
-$grid-float-breakpoint: 796px; // Point for the navbar to put links into collapse
+$grid-float-breakpoint: 798px; // Point for the navbar to put links into collapse
 
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
@@ -41,3 +41,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // Trumps: Clearfix o.l.
 
 /* ----- Main ----- */
+
+html {
+	overflow-x: hidden; }

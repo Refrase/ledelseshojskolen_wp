@@ -33,8 +33,11 @@ $(document).ready(function() {
 	});
 	// ... og når man klikker udenfor dropdown-menuen
 	$(document).on('click',function(){
-		$( '.collapse' ).collapse( 'hide' );
-	})
+	  var navbarToggle = $( '.navbar-toggle' );
+	  if ( navbarToggle.is( ':visible' ) ) {
+			$( '.collapse' ).collapse( 'hide' );
+		}
+	});
 
 	// Fuldskærmsvideo
 	$(function(){
