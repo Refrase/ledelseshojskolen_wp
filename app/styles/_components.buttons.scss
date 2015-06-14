@@ -1,0 +1,14 @@
+/* ----- Buttons ----- */
+
+.btn {
+	width: 50%;
+	@include pad-top-btm($dist-s); }
+
+.btn-default {
+	color: $clr-sec3;
+	background: $clr-pri1;
+	border: none; }
+
+.btn-default:hover {
+	color: $clr-sec3;
+	background: $clr-pri1-sha1; }

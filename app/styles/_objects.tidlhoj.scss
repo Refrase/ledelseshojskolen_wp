@@ -1,0 +1,93 @@
+/* ----- Tidliger Højskoler ----- */
+
+// Timeline-nav
+.tidlhoj {
+	position: relative;
+	background: $clr-pri1;
+	padding-top: $dist-xl + $dist-l;
+	@include pad-top-btm($dist-xl); }
+
+.tidlhoj-nav {
+	// display: flex;
+	// @include justify-content(space-between);
+	// @include align-items(center);
+	margin-bottom: $dist-l; }
+
+.tidlhoj-nav i,
+.tidlhoj-nav h2 {
+	color: $clr-sec3; }
+
+.tidlhoj-nav h2 {
+	width: 100%; // Fjern disse to og uncomment oppe ved,
+	text-align: center; // tidlhoj-nav, hvis pile skal med
+	margin-bottom: $dist-s; }
+
+// Timeline
+.tidlhoj-timeline-wrap {
+	padding: 0; }
+
+.tl-punkt {
+	fill: $clr-sec3;
+  cursor: pointer;
+  transition: all 0.3s; }
+
+.tl-punkt:hover {
+  transform: translateY(-2px); }
+
+.tl-streg {
+	stroke: $clr-sec3;
+	stroke-width: 8; }
+
+.timeline-now-place {
+	width: 100%;
+	text-align: center;
+	color: #fff; }
+
+.timeline-now {
+	position: absolute;
+	left: calc(50% - 40px);
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 40px solid $clr-sec3; }
+
+// Beskrivelse af enkelt tidligere højskole
+.tidlhoj-beskr {
+	background: $clr-sec3;
+	@include pad-top-btm($dist-xl); }
+
+.tl-p2-cont,
+.tl-p3-cont,
+.tl-p2-contpic,
+.tl-p3-contpic {
+	display: none; }
+
+.tidlhoj-beskr h3 {
+	color: $clr-pri1; }
+
+.tidlhoj-beskr p {
+	padding-top: $dist-m; }
+
+// Billede i bunden
+.tidlhoj-pic {
+	height: 400px;
+	background-position: 0 -100px;
+	background-size: cover;
+	background-repeat: no-repeat; }
+
+.tl-p1-contpic {
+	background-image: url(../images/sagnland001.jpg); }
+
+.tl-p2-contpic {
+	background-image: url(../images/vallekilde002.jpg); }
+
+.tl-p3-contpic {
+	background-image: url(../images/tredjested.jpg); }
+
+
+
+
+
+

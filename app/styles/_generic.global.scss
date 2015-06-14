@@ -1,0 +1,18 @@
+/* ----- Global settings ----- */
+
+* {
+	color: $clr-sec1;
+	font-family: "Exo 2", sans-serif;
+	list-style: none; }
+
+*, h1, h2, h3, h4, h5, h6, p, a, section {
+	margin: 0;
+	padding: 0; }
+
+	// Tekst-markerings farve
+::selection {
+  background: $clr-sec1;
+  color: $clr-sec3; }
+::-moz-selection {
+  background: $clr-sec1; 
+	color: $clr-sec3; }

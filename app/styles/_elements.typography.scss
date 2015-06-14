@@ -1,0 +1,53 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:700,700italic,600,600italic,400,400italic);
+
+/* ----- Headings ----- */
+
+$text-xxxl: 8em;
+$text-xxl: 	5em;
+$text-xl: 	3em;
+$text-l: 	1.5em;
+$text-m: 		1em;
+$text-s: 	0.9em;
+$text-xs: 0.7em;
+$text-xxs:0.5em;
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 1px;
+	color: $clr-sec1;
+	margin-bottom: $dist-m; }
+
+h1 {
+	font-size: $text-xxl;
+	font-style: italic;
+	letter-spacing: 4px; }
+
+h2 { font-size: $text-xl; }
+
+h2, h3 {
+	font-style: italic;
+	font-weight: 600; }
+
+h3 { font-size: $text-l; }
+
+h4, p, a {
+	font-size: $text-m; }
+
+h5 { font-size: $text-s; }
+
+h6 { font-size: $text-xs; }
+
+p {
+	color: $clr-sec1;
+	line-height: 1.7em; }
+
+blockquote {
+	border: none; }
+
+blockquote p {
+	font-size: 2em;
+	font-style: italic; }
+
+cite {
+	font-weight: 400;
+	font-size: $text-xs;
+	color: $clr-sec2; }

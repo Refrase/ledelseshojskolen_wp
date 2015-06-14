@@ -1,0 +1,41 @@
+/* ----- Fra Yeoman-build ----- */
+
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "components-font-awesome/scss/font-awesome.scss";
+// endbower
+
+/* ----- Partials ----- */
+
+// Settings: Variabler (Sass)
+@import "settings.colors";
+@import "settings.margins";
+
+// Tools: Mixins + funktioner (Sass)
+@import "tools.mixins";
+
+// Generic: Resets + globale styles
+@import "generic.global";
+
+// Elements: Html-elementer u. classes
+@import "elements.typography";
+@import "elements.forms";
+@import "elements.containers";
+
+// Objects: Dele af siden
+@import "objects.nav";
+@import "objects.intro";
+@import "objects.video";
+@import "objects.hvadhvof";
+@import "objects.nhojsktilm";
+@import "objects.faelskab";
+@import "objects.tidlhoj";
+@import "objects.footer";
+
+// Components: Specifikke dele af elementer
+@import "components.buttons";
+
+// Trumps: Clearfix o.l.
+
+/* ----- Main ----- */

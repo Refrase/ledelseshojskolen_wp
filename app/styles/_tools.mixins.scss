@@ -1,0 +1,40 @@
+/* ----- Mixins ----- */
+
+@mixin marg-top-btm($dist) {
+	margin-top: 		$dist;
+	margin-bottom: 	$dist; }
+
+@mixin marg-left-rgt($dist) {
+	margin-left: 		$dist;
+	margin-right: 	$dist; }
+
+@mixin pad-top-btm($dist) {
+	padding-top: 		$dist;
+	padding-bottom: $dist; }
+
+@mixin pad-left-rgt($dist) {
+	padding-left: 	$dist;
+	padding-right: 	$dist; }
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}'); }
+
+// Flexbox
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify; }
+
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align; }

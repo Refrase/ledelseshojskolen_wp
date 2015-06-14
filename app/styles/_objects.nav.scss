@@ -1,0 +1,55 @@
+/* ----- Nav ----- */
+
+.navbar {
+  border-radius: 0;
+  border: none;
+  margin: 0; }
+
+.navbar-default {
+	background: $clr-sec3-rgba2; }
+
+.nav {
+	position: relative;
+	display: block;
+	margin: 0 auto; }
+
+.navbar-brand,
+.navbar-default .navbar-left > li > a {
+	font-size: 20px;
+	font-weight: 600; }
+
+.navbar > .container-fluid .navbar-brand,
+.navbar > .container-fluid .navbar-brand-wide,
+.navbar-default .navbar-nav > li > a {
+	color: $clr-sec1; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > li > a:hover  {
+	border-bottom: 4px solid $clr-pri2;
+	background: none; }
+
+.navbar-default .navbar-left > li > a:hover {
+	border: none; }
+
+// PF-link
+.navbar-default .navbar-right > li > a {
+	color: $clr-sec2; }
+
+.navbar-default .navbar-right > li > a:hover {
+	color: $clr-sec2; }
+
+.navbar-default .navbar-right > li > a > img {
+	height: 16px;
+	padding-bottom: 4px;
+	padding-left: 4px; }
+
+// Media Queries
+@media (min-width: 768px) {
+	.navbar-brand {
+		display: none; }}
+
+@media (max-width: 768px) {
+	.navbar-left {
+		display: none; }}

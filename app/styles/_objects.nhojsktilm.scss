@@ -1,0 +1,20 @@
+/* ----- Næste højskole & Tilmelding ----- */
+
+.nhojsktilm {
+	background: $clr-sec3; }
+
+.form-nhojsktilm h3 {
+	margin-bottom: $dist-l; }
+
+.row-nhojsktilm_intro { padding-bottom: $dist-xl; }
+.row-nhojsktilm_intro img {
+	width: 100%;
+	padding-top: $dist-xl; }
+
+.row-nhojsktilm_beskr {
+	@include pad-top-btm($dist-xl);
+	background: $clr-sec1; }
+.row-nhojsktilm_beskr h3,
+.row-nhojsktilm_beskr p { color: $clr-sec3; }
+
+.row-nhojsktilm_tilm { padding-top: $dist-xl; }

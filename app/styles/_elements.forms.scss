@@ -1,0 +1,13 @@
+/* ----- Forms ----- */
+
+.form-group {
+	margin-bottom: $dist-m + $dist-s; }
+
+// Inputs
+.form-control {
+	border-radius: $dist-xs;
+	border: none; }
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #909;
+}

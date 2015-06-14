@@ -1,0 +1,57 @@
+/* ----- Footer ----- */
+
+footer {
+	background: $clr-pri2;
+	@include pad-top-btm($dist-m); }
+
+footer .form-horizontal {
+	@include pad-top-btm($dist-xl); }
+
+footer .form-horizontal .control-label {
+	color: $clr-sec3;
+	padding-right: $dist-m;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-style: italic;
+	font-size: $text-xl; }
+
+footer .form-horizontal .form-control {
+	margin-top: 21px;
+	background: $clr-sec3; }
+
+.footer-btm {
+	padding: $dist-m;
+	width: 100%;
+	display: flex;
+	@include justify-content(space-between);
+	@include align-items(flex-end); }
+
+.footer-btm li,
+.footer-btm li i,
+.footer-btm h3 {
+	color: $clr-pri2-sha1; }
+
+.footer-btm-left {
+  padding-left: $dist-l; }
+
+.footer-btm-center h3 {
+	font-size: $text-l;
+	text-align: center;
+	margin-bottom: 0; }
+
+.footer-btm-center li img {
+	width: 20%;
+	margin-left: 40%;
+	margin-bottom: $dist-m; }
+
+.footer-btm-right {
+	display: flex;
+	padding-right: $dist-l; }
+
+.footer-btm-right li {
+	position: relative;
+	font-size: $text-l;
+	@include marg-left-rgt($dist-m); }
+
+.footer-btm-right li i {
+	position: relative; }
