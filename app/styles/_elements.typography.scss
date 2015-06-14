@@ -20,13 +20,16 @@ h1 {
 	font-size: $text-xxl;
 	letter-spacing: 4px; }
 
-h2 { font-size: $text-xl; }
-
-h2, h3 {
-	font-style: italic;
+h2 {
+	font-size: $text-xl;
 	font-weight: 600; }
 
-h3 { font-size: $text-l; }
+h2, h3 {
+	font-style: italic; }
+
+h3 {
+	font-size: $text-l;
+	font-weight: 500; }
 
 h4, p, a {
 	font-size: $text-m; }
