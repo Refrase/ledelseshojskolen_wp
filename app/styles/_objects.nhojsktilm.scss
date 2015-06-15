@@ -1,20 +1,40 @@
 /* ----- Næste højskole & Tilmelding ----- */
 
 .nhojsktilm {
-	background: $clr-sec3; }
+	padding-top: $dist-xl;
+	background: $clr-sec3;
+	position: relative; }
 
-.form-nhojsktilm h3 {
-	margin-bottom: $dist-l; }
+.row-nhojsktilm_intro h3 {
+	margin-top: $dist-l; }
 
-.row-nhojsktilm_intro { padding-bottom: $dist-xl; }
-.row-nhojsktilm_intro img {
-	width: 100%;
-	padding-top: $dist-xl; }
+.whitebox-nhojsktilm {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 37%;
+	background: #fff; }
 
-.row-nhojsktilm_beskr {
-	@include pad-top-btm($dist-xl);
-	background: $clr-sec1; }
-.row-nhojsktilm_beskr h3,
-.row-nhojsktilm_beskr p { color: $clr-sec3; }
+.nhojsktilm_tilm {
+	position: absolute;
+	top: 200px;
+ 	background: $clr-sec1;
+	padding-top: $dist-xl;
+	padding-bottom: $dist-xxl; }
 
-.row-nhojsktilm_tilm { padding-top: $dist-xl; }
+.form-nhojsktilm h3 { margin-bottom: $dist-m; }
+
+.form-nhojsktilm h3,
+.form-nhojsktilm p {
+	color: $clr-sec3; }
+
+.form-nhojsktilm label {
+	color: $clr-sec3; }
+
+.btn-program {
+  @include marg-top-btm($dist-l);	}
+
+.logo-nhojsktilm {
+	display: block;
+	width: 100px; }

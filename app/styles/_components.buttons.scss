@@ -1,8 +1,8 @@
 /* ----- Buttons ----- */
 
 .btn {
-	width: 50%;
-	@include pad-top-btm($dist-s); }
+	@include pad-left-rgt($dist-l + $dist-m);
+	@include pad-top-btm($dist-s + $dist-xs); }
 
 .btn-default {
 	color: $clr-sec3;
