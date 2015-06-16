@@ -33,8 +33,18 @@
 	color: $clr-sec3; }
 
 .btn-program {
-  @include marg-top-btm($dist-l);	}
+	background: $clr-pri1;
+	@include marg-top-btm($dist-l); }
+
+.btn-program:hover {
+	background: $clr-pri1-sha1; }
 
 .logo-nhojsktilm {
 	display: block;
 	width: 100px; }
+
+.btn-tilmeld {
+	background: $clr-pri2-sha1; }
+
+.btn-tilmeld:hover {
+	background: $clr-pri2-sha2; }

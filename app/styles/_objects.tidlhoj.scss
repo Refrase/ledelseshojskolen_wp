@@ -3,88 +3,117 @@
 // Timeline-nav
 .tidlhoj {
 	position: relative;
-	background: $clr-pri1;
+	background: $clr-sec1;
 	padding-top: $dist-xl + $dist-l;
 	@include pad-top-btm($dist-xl); }
 
+.tidlhoj-beskr {
+	position: relative; }
+
 .tidlhoj-nav {
-	// display: flex;
-	// @include justify-content(space-between);
-	// @include align-items(center);
 	margin-bottom: $dist-l; }
 
-.tidlhoj-nav i,
-.tidlhoj-nav h2 {
-	color: $clr-sec3; }
-
-.tidlhoj-nav h2 {
+.tidlhoj-nav h1 {
+	margin-bottom: -$dist-m;
+	color: $clr-sec3;
 	width: 100%; // Fjern disse to og uncomment oppe ved,
-	text-align: center; // tidlhoj-nav, hvis pile skal med
-	margin-bottom: $dist-s; }
+	text-align: center; } // tidlhoj-nav, hvis pile skal med
 
 // Timeline
 .tidlhoj-timeline-wrap {
+	position: absolute;
+	height: calc(100% - 128px);
+	top: $dist-xl;
+	right: 0;
 	padding: 0; }
 
 .tl-punkt {
-	fill: $clr-sec3;
+	fill: #fff;
   cursor: pointer;
   transition: all 0.3s; }
 
 .tl-punkt:hover {
-  transform: translateY(-2px); }
+  transform: translateX(-4px); }
 
 .tl-streg {
-	stroke: $clr-sec3;
-	stroke-width: 8; }
-
-.timeline-now-place {
-	width: 100%;
-	text-align: center;
-	color: #fff; }
-
-.timeline-now {
-	position: absolute;
-	left: calc(50% - 40px);
-	bottom: 0;
-	width: 0;
-	height: 0;
-	border-left: 40px solid transparent;
-	border-right: 40px solid transparent;
-	border-bottom: 40px solid $clr-sec3; }
+	stroke: #fff;
+	stroke-width: 4; }
 
 // Beskrivelse af enkelt tidligere højskole
 .tidlhoj-beskr {
-	background: $clr-sec3;
 	@include pad-top-btm($dist-xl); }
 
-.tl-p2-cont,
+.tidlhoj-beskr h2, // Overskrift
+.tidlhoj-beskr h5, // Dato
+.tidlhoj-beskr p { // Tekst
+  color: $clr-sec3; }
+
+.tidlhoj-beskr h3 { // Sted
+	font-style: normal;
+	color: $clr-sec1; }
+
+.btn-dokushop {
+	margin-top: $dist-l;
+	color: $clr-sec1;
+	background: rgba(0,0,0,0);
+	border: 2px solid $clr-sec3 }
+
+.btn-dokushop:hover {
+	color: $clr-sec1;
+	background: $clr-sec3; }
+
+.tl-p1-cont,
 .tl-p3-cont,
-.tl-p2-contpic,
-.tl-p3-contpic {
+.tl-p1-contpic,
+.tl-p3-contpic,
+.tl-p1-contpic-overl,
+.tl-p3-contpic-overl {
 	display: none; }
 
-.tidlhoj-beskr h3 {
-	color: $clr-pri1; }
+.tidlhojsk-beskr_bodyc {
+	padding-top: $dist-xxl; }
 
-.tidlhoj-beskr p {
-	padding-top: $dist-m; }
+// Billede
+.tidlhoj-pic_overlay {
+	position: absolute;
+	top: $dist-l;
+	left: 0;
+	width: calc(58.33333% - 64px);
+	height: calc(100% - 64px);
+	// background: rgba(255, 255, 255, 0.90);
+	z-index: -5;
+	border-top-right-radius: $dist-m;
+	border-bottom-right-radius: $dist-m; }
 
-// Billede i bunden
+.tl-p1-contpic-overl {
+	background: rgba(54, 158, 218, 0.90); }
+
+.tl-p2-contpic-overl {
+	background: rgba(163, 158, 61, 0.90); }
+
+.tl-p3-contpic-overl {
+	background: rgba(158, 161, 178, 0.90); }
+
 .tidlhoj-pic {
-	height: 400px;
-	background-position: 0 -100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: calc(100% + 32px);
 	background-size: cover;
-	background-repeat: no-repeat; }
+	background-repeat: no-repeat;
+	z-index: -10; }
 
 .tl-p1-contpic {
-	background-image: url(../images/sagnland001.jpg); }
+	background-position: 0 -150px;
+	background-image: url(../images/born-faldskaerm-1280x783.jpg); }
 
 .tl-p2-contpic {
-	background-image: url(../images/vallekilde002.jpg); }
+	background-position: 0 -150px;
+	background-image: url(../images/dfl-01-800x600.jpg); }
 
 .tl-p3-contpic {
-	background-image: url(../images/tredjested.jpg); }
+	background-image: url(../images/dsw-01-1280x956.jpg); }
 
 
 

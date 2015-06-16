@@ -67,31 +67,26 @@ $(document).ready(function() {
 	});
 
 	// Timeline (tidlhoj)
-	// Få x-placering af den prik der trykkes på (%)
 	$('.tl-punkt').click(function() {
-		// Returnerer positionen for det klikkede (top og left)
-   	var clickedPos = $(this).position();
-   	// Få left-positionen
-   	var clickedX = clickedPos.left;
-   	// Tag højde for trekantens bredde
-   	var adjustClickedX = clickedX - 22;
-   	// Flyt trekant derhen
-   	$('.timeline-now').animate({
-   		left: adjustClickedX
-   	});
    	// Hide/show relevant indhold
    	// Hent id på på prik der trykkes på
-   	var clickedNum = $(this).attr('id');
+   	var clickedId = $(this).attr('id');
    	// Skjul alle content blokke
-   	var tlpContAll = $('.tl-p1-cont, .tl-p1-contpic, .tl-p2-cont, .tl-p2-contpic, .tl-p3-cont, .tl-p3-contpic');
+   	var tlpContAll = $('.tl-cont, .tidlhoj-pic, .tidlhoj-pic_overlay');
    	tlpContAll.hide();
-   	// Hvis content blok alt efter hvilken der trykkes på
-   	if (clickedNum === 'tl-p1') {
-			$('.tl-p1-cont, .tl-p1-contpic').fadeIn();
-   	} else if (clickedNum === 'tl-p2') {
-			$('.tl-p2-cont, .tl-p2-contpic').fadeIn();
-   	} else if (clickedNum === 'tl-p3') {
-			$('.tl-p3-cont, .tl-p3-contpic').fadeIn();
+   	// Vis content blok alt efter hvilken der trykkes på
+   	if (clickedId === 'tl-p1') {
+			$('.tl-p1-contpic').show();
+			$('.tl-p1-cont').fadeIn(400);
+			$('.tl-p1-contpic-overl').toggle('slide');
+   	} else if (clickedId === 'tl-p2') {
+			$('.tl-p2-contpic').show();
+			$('.tl-p2-cont').fadeIn(400);
+			$('.tl-p2-contpic-overl').toggle('slide');
+   	} else if (clickedId === 'tl-p3') {
+			$('.tl-p3-contpic').show();
+			$('.tl-p3-cont').fadeIn(400);
+			$('.tl-p3-contpic-overl').toggle('slide');
    	}
 	});
 
