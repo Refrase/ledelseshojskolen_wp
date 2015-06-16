@@ -1,14 +1,30 @@
 /* ----- Buttons ----- */
 
 .btn {
-	@include pad-left-rgt($dist-l + $dist-m);
+	width: 100%;
 	@include pad-top-btm($dist-s + $dist-xs); }
 
 .btn-default {
 	color: $clr-sec3;
-	background: $clr-pri1;
 	border: none; }
 
 .btn-default:hover {
-	color: $clr-sec3;
+	color: $clr-sec3; }
+
+.btn-program {
+	background: $clr-pri1; }
+
+.btn-program:hover {
 	background: $clr-pri1-sha1; }
+
+.btn-tilmeld {
+	background: $clr-sec1; }
+
+.btn-tilmeld:hover {
+	background: $clr-sec1-sha1; }
+
+.btn-medlemmer {
+	background: $clr-pri2; }
+
+.btn-medlemmer:hover {
+	background: $clr-pri2-sha1; }

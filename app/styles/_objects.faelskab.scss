@@ -5,10 +5,14 @@
 	text-align: center;
 	margin-bottom: $dist-l; }
 
+.faelskab h4 {
+	text-align: right;
+	padding-top: 70px; }
+
 .faelskab_billeder {
 	display: flex;
 	justify-content: center;
-	margin-bottom: $dist-xl; }
+	margin-bottom: $dist-l; }
 
 .faelskab_billeder li:first-child,
 .faelskab_billeder li:first-child:after {
@@ -30,12 +34,14 @@
 
 .faelskab_billeder li:after {
   content: '';
+  white-space: pre; // Muliggør line-break i content med '\A'
   position: absolute;
   width: 100%; height: 100%;
   top: 50px; left: 0;
   background: $clr-pri1-rgba1;
 	color: $clr-sec3;
-	font-size: $text-l;
+	font-size: $text-m;
+	line-height: 1.2em;
 	text-align: center;
 	padding-top: 0;
   opacity: 0;
@@ -46,17 +52,24 @@
   top: 0;
   padding-top: 60%; }
 
-.faelskab_billeder li:nth-child(1):after {
-	content: 'Dennis Rasmussen'; }
-.faelskab_billeder li:nth-child(2):after {
-	content: 'Sofie'; }
-.faelskab_billeder li:nth-child(3):after {
-	content: 'Ulrik'; }
-.faelskab_billeder li:nth-child(4):after {
-	content: 'Anja'; }
-.faelskab_billeder li:nth-child(5):after {
-	content: 'Bjarne'; }
-.faelskab_billeder li:nth-child(6):after {
-	content: 'Niels'; }
-.faelskab_billeder li:nth-child(7):after {
-	content: 'Kirsten'; }
+.lh-gruppen li:nth-child(1):after {
+	content: 'Dennis \A Rasmussen'; }
+.lh-gruppen li:nth-child(2):after {
+	content: 'Claus \A Dahl'; }
+.lh-gruppen li:nth-child(3):after {
+	content: 'Ole \A Dissing'; }
+.lh-gruppen li:nth-child(4):after {
+	content: 'Jens \A Larsen'; }
+.lh-gruppen li:nth-child(5):after {
+	content: 'Carsten \A Reves'; }
+
+.adv-board li:nth-child(1):after {
+	content: 'Ole \A Petersen'; }
+.adv-board li:nth-child(2):after {
+	content: 'Lisbet \A Lentz'; }
+.adv-board li:nth-child(3):after {
+	content: 'Lars \A Holten'; }
+.adv-board li:nth-child(4):after {
+	content: 'Kommer...'; }
+.adv-board li:nth-child(5):after {
+	content: 'Kommer...'; }
