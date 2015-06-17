@@ -3,7 +3,7 @@
 // Timeline-nav
 .tidlhoj {
 	position: relative;
-	background: $clr-sec1;
+	background: #fff;
 	padding-top: $dist-xl + $dist-l;
 	@include pad-top-btm($dist-xl); }
 
@@ -15,24 +15,20 @@
 
 .tidlhoj-nav h1 {
 	margin-bottom: -$dist-m;
-	color: $clr-sec3;
+	color: $clr-sec1;
 	width: 100%; // Fjern disse to og uncomment oppe ved,
 	text-align: center; } // tidlhoj-nav, hvis pile skal med
 
 // Timeline
 .tidlhoj-timeline-wrap {
-	position: absolute;
-	height: calc(100% - 128px);
-	top: $dist-xl;
-	right: 0;
 	padding: 0; }
 
 .tl-punkt {
-	fill: #fff;
+	fill: $clr-sec3;
   cursor: pointer;
   r: 10;
   @include animation(transl 4s ease-in infinite); // Call for action [Bourbon]
-  @include transition(all 0.3s); } // For ease on hover [Bourbon]
+  }
 
 .tl-punkt:hover {
 	@include animation(0);
@@ -46,7 +42,7 @@
     100% 	{ r: 10; } }
 
 .tl-streg {
-	stroke: #fff;
+	stroke: $clr-sec3;
 	stroke-width: 4; }
 
 // Beskrivelse af enkelt tidligere højskole
@@ -57,6 +53,9 @@
 .tidlhoj-beskr h5, // Dato
 .tidlhoj-beskr p { // Tekst
   color: $clr-sec3; }
+
+.tl-p-future-headline { // Standalone headline for fremtidige højskoler
+	margin-bottom: $dist-xl;	}
 
 .tidlhoj-beskr h3 { // Sted
 	font-style: normal;
@@ -86,13 +85,13 @@
 // Billede
 .tidlhoj-pic_overlay {
 	position: absolute;
-	top: $dist-l;
+	top: $dist-xl;
 	left: 0;
 	width: calc(58.33333% - 64px);
-	height: calc(100% - 64px);
+	height: calc(100% - 128px);
 	z-index: -5;
-	border-top-right-radius: $dist-m;
-	border-bottom-right-radius: $dist-m; }
+	border-top-right-radius: $dist-s;
+	border-bottom-right-radius: $dist-s; }
 
 .tl-p1-contpic-overl {
 	background: rgba(158, 161, 178, 0.90); }
