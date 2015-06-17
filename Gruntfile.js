@@ -152,8 +152,9 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
-        loadPath: 'bower_components'
-      },
+        sourceMap: true,
+        includePaths: ['bower_components']
+        },
       dist: {
         files: [{
           expand: true,
@@ -194,11 +195,12 @@ module.exports = function (grunt) {
       app: {
         ignorePath: /^\/|\.\.\//,
         src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js']
+        exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js']
       },
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /(\.\.\/){1,2}bower_components\//
+        ignorePath: /(\.\.\/){1,2}bower_components\//,
+        exclude: ['bower_components/components-font-awesome/scss/font-awesome.scss']
       }
     },
 

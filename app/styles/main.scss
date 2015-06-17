@@ -2,10 +2,11 @@
 
 $grid-float-breakpoint: 798px; // Point for the navbar to put links into collapse
 
+// CSS PAKKER 'EXCLUDED' ENKELTVIS I gruntfile.js UNDER wiredep: { ...
+
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "components-font-awesome/scss/font-awesome.scss";
 @import "bourbon/app/assets/stylesheets/_bourbon.scss";
 // endbower
 

@@ -147,7 +147,7 @@
               <li>5762 Vester Skerninge</li>
               <li>Ollerup, Svendborg</li>
             </ul>
-            <p>9.995,- ex. moms</p>
+            <p>9.995,- eks. moms</p>
             </div>
 
             <div class="col-sm-4">
@@ -290,7 +290,7 @@
               <br><br>
               <blockquote class="col-md-6 col-md-offset-1">
                 <p>Ledelseshøjskolen er en nødvendighed.</p>
-                <cite>- deltager på den samskabende workshop</cite>
+                <cite class="tidlhojsk-beskr_citat">- deltager på den samskabende workshop</cite>
               </blockquote>
             </p>
           </div>
@@ -314,7 +314,7 @@
               <br><br>
               <blockquote class="col-md-6 col-md-offset-1">
                 <p>Du kan kun lede det, din kontekst skaber af ledelse i dig.</p>
-                <cite>- deltager på den samskabende workshop</cite>
+                <cite class="tidlhojsk-beskr_citat">- deltager på den samskabende workshop</cite>
               </blockquote>
             </p>
           </div>
@@ -342,11 +342,34 @@
 
     <footer id="nyhedsb">
       <div class="container-fluid">
-        <form class="form-newsletter form-horizontal">
+        <form class="form-newsletter form-horizontal col-sm-3 col-sm-offset-1">
           <div class="form-group">
-            <label for="inp-mail-newsl" class="col-sm-3 col-sm-offset-1 control-label">Nyhedsbrev</label>
-            <div class="col-sm-6">
-              <input type="email" class="form-control" id="inp-mail-newsl" placeholder="Mail" />
+            <h3>Nyhedsbrev</h3>
+            <p class="help-block">Nyhedsbrev udsendes 2-4 gange om året.</p>
+          </div>
+          <div class="form-group">
+            <label for="inp-newsl_mail" class="control-label col-sm-2">Mail</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inp-newsl_mail" />
+            </div>
+          </div>
+        </form>
+
+        <form class="form-newsletter form-horizontal col-sm-6 col-sm-offset-1">
+          <div class="form-group">
+            <h3>Medlemskab</h3>
+            <p class="help-block">Medlemskab af ledelseshøjskolefællesskabet indebærer:
+            <br>
+            10% rabat på ledelseshøjskoler, nyhedsbrev, invitationer til særarrangementer, mulighed for at holde oplæg på ledelseshøjskolen og inspirerende netværk.</p>
+          </div>
+          <div class="form-group">
+            <label for="inp-medlemsk_mail" class="control-label col-sm-2">Fornavn*</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="inp-medlemsk_mail" />
+            </div>
+            <label for="inp-medlemsk_mail" class="control-label col-sm-2">Efternavn*</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="inp-medlemsk_mail" />
             </div>
           </div>
         </form>
@@ -380,21 +403,11 @@
       </div>
     </footer>
 
+    <!-- JS PAKKER 'EXCLUDED' ENKELTVIS I gruntfile.js UNDER wiredep: { ... -->
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
