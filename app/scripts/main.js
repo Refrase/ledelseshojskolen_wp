@@ -66,11 +66,6 @@ $(document).ready(function() {
 		$('.fa', this).animate({bottom: '-=4px'}, 400);
 	});
 
-	// Initialze tooltip
-	$(function () {
-	  $('[data-toggle="tooltip"]').tooltip()
-	})
-
 	// Timeline (tidlhoj)
 	$('.tl-punkt').click(function() {
    	// Hide/show relevant indhold

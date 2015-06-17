@@ -5,8 +5,11 @@
 
 // Inputs
 .form-control {
+	background: $clr-sec3;
 	border-radius: $dist-xs;
 	border: none; }
 
 // Labels
-.control-label { font-weight: 400; }
+.control-label {
+	font-weight: 400;
+	font-size: $text-s; }

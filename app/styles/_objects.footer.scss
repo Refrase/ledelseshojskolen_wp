@@ -4,20 +4,15 @@ footer {
 	background: $clr-pri2;
 	@include pad-top-btm($dist-m); }
 
-footer .form-horizontal {
+footer .form {
 	@include pad-top-btm($dist-xl); }
 
-footer .form-horizontal .control-label {
-	color: $clr-sec3;
-	padding-right: $dist-m;
-	font-weight: 600;
-	letter-spacing: 1px;
-	font-style: italic;
-	font-size: $text-xl; }
+footer .form h3,
+footer .control-label  {
+	color: $clr-sec3; }
 
-footer .form-horizontal .form-control {
-	margin-top: 21px;
-	background: $clr-sec3; }
+.help-block {
+	color: $clr-pri2-sha1; }
 
 .footer-btm {
 	padding: $dist-m;

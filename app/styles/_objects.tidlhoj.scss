@@ -3,7 +3,7 @@
 // Timeline-nav
 .tidlhoj {
 	position: relative;
-	background: #fff;
+	background: $clr-sec3;
 	padding-top: $dist-xl + $dist-l;
 	@include pad-top-btm($dist-xl); }
 
@@ -14,7 +14,7 @@
 	margin-bottom: $dist-l; }
 
 .tidlhoj-nav h1 {
-	margin-bottom: -$dist-m;
+	margin-bottom: -$dist-m - $dist-s;
 	color: $clr-sec1;
 	width: 100%; // Fjern disse to og uncomment oppe ved,
 	text-align: center; } // tidlhoj-nav, hvis pile skal med
@@ -59,16 +59,16 @@
 
 .tidlhoj-beskr h3 { // Sted
 	font-style: normal;
-	color: $clr-sec1; }
+	color: $clr-pri1; }
 
 .btn-dokushop {
 	margin-top: $dist-l;
-	color: $clr-sec1;
+	color: $clr-pri1;
 	background: rgba(0,0,0,0);
 	border: 2px solid $clr-sec3 }
 
 .btn-dokushop:hover {
-	color: $clr-sec1;
+	color: $clr-pri1;
 	background: $clr-sec3; }
 
 .tl-p1-cont,
@@ -82,6 +82,9 @@
 .tidlhojsk-beskr_bodyc {
 	padding-top: $dist-xxl; }
 
+.tidlhojsk-beskr_citat {
+	color: $clr-pri1; }
+
 // Billede
 .tidlhoj-pic_overlay {
 	position: absolute;
@@ -90,17 +93,18 @@
 	width: calc(58.33333% - 64px);
 	height: calc(100% - 128px);
 	z-index: -5;
+	background: $clr-sec1-rgba1;
 	border-top-right-radius: $dist-s;
 	border-bottom-right-radius: $dist-s; }
 
-.tl-p1-contpic-overl {
-	background: rgba(158, 161, 178, 0.90); }
+// .tl-p1-contpic-overl {
+// 	background: rgba(158, 161, 178, 0.90); }
 
-.tl-p2-contpic-overl {
-	background: rgba(163, 158, 61, 0.90); }
+// .tl-p2-contpic-overl {
+// 	background: rgba(163, 158, 61, 0.90); }
 
-.tl-p3-contpic-overl {
-	background: rgba(54, 158, 218, 0.90); }
+// .tl-p3-contpic-overl {
+// 	background: rgba(54, 158, 218, 0.90); }
 
 .tidlhoj-pic {
 	position: absolute;
