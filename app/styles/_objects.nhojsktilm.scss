@@ -18,15 +18,14 @@
 
 .nhojsktilm_tilm {
 	position: absolute;
-	top: 190px;
+	top: 100px;
  	background: $clr-pri2;
 	padding-top: $dist-xl;
-	padding-bottom: $dist-xxl; }
+	padding-bottom: $dist-xl; }
 
 .form-nhojsktilm h3 { margin-bottom: $dist-m; }
 
-.form-nhojsktilm h3,
-.form-nhojsktilm p {
+.form-nhojsktilm h3 {
 	color: $clr-sec3; }
 
 .form-nhojsktilm label {
