@@ -4,16 +4,17 @@ footer {
 	background: $clr-pri2;
 	@include pad-top-btm($dist-m); }
 
-footer .form {
-	@include pad-top-btm($dist-xl); }
+footer .form { @include pad-top-btm($dist-xl); }
 
-footer .form h3,
-footer .control-label  {
-	color: $clr-sec3; }
+footer .form h2 {
+	color: $clr-sec3;
+	padding-left: 15px; }
 
-.help-block {
-	color: $clr-pri2-sha1; }
+footer .form-control { margin-bottom: $dist-m; }
 
+.help-block { color: $clr-pri2-sha1; }
+
+// Nederste del af footer
 .footer-btm {
 	padding: $dist-m;
 	width: 100%;

@@ -2,7 +2,7 @@
 
 .btn {
 	width: 100%;
-	@include pad-top-btm($dist-s + $dist-xs); }
+	height: 40px; }
 
 .btn-default {
 	color: $clr-sec3;

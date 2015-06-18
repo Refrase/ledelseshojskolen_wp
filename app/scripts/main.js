@@ -55,17 +55,6 @@ $(document).ready(function() {
 	  });
 	});
 
-	// Sæt billedes højde = dets loadede bredde
-	// var cw = $('.faelskab_billeder li').width();
-	// $('.faelskab_billeder li').css({'height':cw+'px'});
-
-	// Share-buttons i footer - dans på hover
-	$('.footer-btm-right li').on('mouseenter', function(){
-		$('.fa', this).animate({bottom: '+=4px'}, 200);
-	}).on('mouseleave click', function(){
-		$('.fa', this).animate({bottom: '-=4px'}, 400);
-	});
-
 	// Timeline (tidlhoj)
 	$('.tl-punkt').click(function() {
    	// Hide/show relevant indhold
@@ -88,6 +77,17 @@ $(document).ready(function() {
 			$('.tl-p3-cont').fadeIn(400);
 			$('.tl-p3-contpic-overl').toggle('slide');
    	}
+	});
+
+	// Sæt billedes højde = dets loadede bredde
+	// var cw = $('.faelskab_billeder li').width();
+	// $('.faelskab_billeder li').css({'height':cw+'px'});
+
+	// Share-buttons i footer - dans på hover
+	$('.footer-btm-right li').on('mouseenter', function(){
+		$('.fa', this).animate({bottom: '+=4px'}, 200);
+	}).on('mouseleave click', function(){
+		$('.fa', this).animate({bottom: '-=4px'}, 400);
 	});
 
 
