@@ -41,11 +41,11 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="nav-main">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#video">Om<span class="sr-only">(current)</span></a></li>
+              <li class="active"><a href="#om">Om<span class="sr-only">(current)</span></a></li>
               <!--  <li><a href="#hvadhvof">Hvad &amp; Hvorfor</a></li> -->
-              <li><a href="#nhojsktilm">Næste Højskole</a></li>
-              <li><a href="#faelskab">Fællesskabet</a></li>
-              <li><a href="#tidlhoj">Historie</a></li>
+              <li><a href="#naestehojskole">Næste Højskole</a></li>
+              <li><a href="#faellesskabet">Fællesskabet</a></li>
+              <li><a href="#historie">Historie</a></li>
               <li><a href="#nyhedsb">Kontakt</a></li>
               <li><a href="#">English</a></li>
             </ul>

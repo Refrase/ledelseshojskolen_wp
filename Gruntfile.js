@@ -49,11 +49,11 @@ module.exports = function(grunt) {
       },
 			js: {
 				files: [ 'dev/js/*.js' ],
-				tasks: [ 'uglify:dev' ] // Concatenate, but don't minify scripts while developing (see options under 'uglify' ^)
+				tasks: [ 'uglify:dev' ] // Concatenate scripts on change, but don't minify while developing (see options under 'uglify' ^)
 			},
 			css: {
 				files: [ 'dev/scss/**/*.scss' ],
-				tasks: [ 'sass:dev' ] // Concatenate, but don't minify styles while developing (see options under 'sass' ^)
+				tasks: [ 'sass:dev' ] // Concatenate styles on change, but don't minify while developing (see options under 'sass' ^)
 			},
       livereload: {
         files: [ '*.html', '*.php', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}']

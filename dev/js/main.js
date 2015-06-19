@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 'use strict';
 
 	// Opdatér aktivt link i nav med .active state
-	$( '.nav a' ).on( "click" , function(){
+	$( '.nav a' ).on( 'click' , function(){
     $( '.nav' ).find( '.active' ).removeClass( 'active' );
     $(this).parent().addClass( 'active' );
 	});
