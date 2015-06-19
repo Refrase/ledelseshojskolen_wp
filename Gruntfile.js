@@ -1,451 +1,74 @@
-// Generated on 2015-05-07 using
-// generator-webapp 0.5.1
-'use strict';
+module.exports = function(grunt) {
 
-// # Globbing
-// for performance reasons we're only matching one level down:
-// 'test/spec/{,*/}*.js'
-// If you want to recursively match all subfolders, use:
-// 'test/spec/**/*.js'
+	// 1. Configure tasks
+	grunt.initConfig({
 
-module.exports = function (grunt) {
+		pkg: grunt.file.readJSON( 'package.json' ),
 
-  // Time how long tasks take. Can help when optimizing build times
-  require('time-grunt')(grunt);
+		uglify: {
+			build: {
+				src: 'dev/js/*.js',
+				dest: 'js/main.min.js'
+			},
+			dev: {
+				options: {
+					beautify: true,
+					mangle: false,
+					compress: false,
+					preserveComments: 'all'
+				},
+				src: 'dev/js/*.js',
+				dest: 'js/main.min.js'
+			}
+		},
 
-  // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+		// Compile .scss-files in 'dev' folder into 1 style.css file that WP can read
+		sass: {
+			dev: {
+				options: {
+					outputStyle: 'expanded' // 'expanded' = makes the output .css-file easy to read
+				},
+				files: {
+					'style.css': 'dev/scss/style.scss'
+				}
+			},
+			build: {
+				options: {
+					outputStyle: 'compressed' // 'compressed' = minifies the output for live server
+				},
+				files: {
+					'style.css': 'dev/scss/style.scss'
+				}
+			}
+		},
 
-  // Configurable paths
-  var config = {
-    app: 'app',
-    dist: 'dist'
-  };
-
-  // Define the configuration for all the tasks
-  grunt.initConfig({
-
-    // Project settings
-    config: config,
-
-    // Watches files for changes and runs tasks based on the changed files
-    watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
+		// Initialize 'grunt watch'-task with livereload (also install livereload plugin in browser to make it work)
+		watch: {
+      options: {
+        livereload: true,
       },
-      js: {
-        files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['jshint'],
-        options: {
-          livereload: true
-        }
-      },
-      jstest: {
-        files: ['test/spec/{,*/}*.js'],
-        tasks: ['test:watch']
-      },
-      gruntfile: {
-        files: ['Gruntfile.js']
-      },
-      sass: {
-        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer']
-      },
-      styles: {
-        files: ['<%= config.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
-      },
+			js: {
+				files: [ 'dev/js/*.js' ],
+				tasks: [ 'uglify:dev' ] // Concatenate, but don't minify scripts while developing (see options under 'uglify' ^)
+			},
+			css: {
+				files: [ 'dev/scss/**/*.scss' ],
+				tasks: [ 'sass:dev' ] // Concatenate, but don't minify styles while developing (see options under 'sass' ^)
+			},
       livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '<%= config.app %>/{,*/}*.{html,php}', // Changed from 'html' to {html,php} for use with PHP (MAMP AND WP)
-          'app/styles/{,*/}*.css', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
-          '<%= config.app %>/images/{,*/}*'
-        ]
+        files: [ '*.html', '*.php', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}']
       }
-    },
+		}
 
-    // The actual grunt server settings
-    connect: {
-      options: {
-        port: 9000,
-        open: true,
-        livereload: 35729,
-        // Change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
-      },
-      livereload: {
-        options: {
-          middleware: function(connect) {
-            return [
-              connect.static('.tmp'),
-              connect().use('/bower_components', connect.static('./bower_components')),
-              connect.static(config.app)
-            ];
-          }
-        }
-      },
-      test: {
-        options: {
-          open: false,
-          port: 9001,
-          middleware: function(connect) {
-            return [
-              connect.static('.tmp'),
-              connect.static('test'),
-              connect().use('/bower_components', connect.static('./bower_components')),
-              connect.static(config.app)
-            ];
-          }
-        }
-      },
-      dist: {
-        options: {
-          base: '<%= config.dist %>',
-          livereload: false
-        }
-      }
-    },
+	});
 
-    // Empties folders to start fresh
-    clean: {
-      dist: {
-        files: [{
-          dot: true,
-          src: [
-            '.tmp',
-            '<%= config.dist %>/*',
-            '!<%= config.dist %>/.git*'
-          ]
-        }]
-      },
-      server: '.tmp'
-    },
+	// 2. Load plugins
+	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' ); // Runs on command 'grunt watch'
+	grunt.loadNpmTasks( 'grunt-sass' );
 
-    // Make sure code styles are up to par and there are no obvious mistakes
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
-      },
-      all: [
-        'Gruntfile.js',
-        '<%= config.app %>/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
-      ]
-    },
+	// 3. Register task(s)
+	grunt.registerTask('default', [ 'uglify:dev', 'sass:dev' ]); // Runs on command 'grunt' as it is set to default
+	grunt.registerTask('build', [ 'uglify:build', 'sass:build' ]); // Runs on command 'grunt build'
 
-    // Mocha testing framework configuration options
-    mocha: {
-      all: {
-        options: {
-          run: true,
-          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
-        }
-      }
-    },
-
-    // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
-      options: {
-        sourceMap: true,
-        includePaths: ['bower_components']
-        },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: 'app/styles', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
-          ext: '.css'
-        }]
-      },
-      server: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/styles',
-          src: ['*.{scss,sass}'],
-          dest: 'app/styles', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
-          ext: '.css'
-        }]
-      }
-    },
-
-    // Add vendor prefixed styles
-    autoprefixer: {
-      options: {
-        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'app/styles/', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
-          src: '{,*/}*.css',
-          dest: 'app/styles/' // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
-        }]
-      }
-    },
-
-    // Automatically inject Bower components into the HTML file
-    wiredep: {
-      app: {
-        ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js', 'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js']
-      },
-      sass: {
-        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /(\.\.\/){1,2}bower_components\//,
-        exclude: ['bower_components/components-font-awesome/scss/font-awesome.scss']
-      }
-    },
-
-    // Renames files for browser caching purposes
-    rev: {
-      dist: {
-        files: {
-          src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '<%= config.dist %>/images/{,*/}*.*',
-            '<%= config.dist %>/styles/fonts/{,*/}*.*',
-            '<%= config.dist %>/*.{ico,png}'
-          ]
-        }
-      }
-    },
-
-    // Reads HTML for usemin blocks to enable smart builds that automatically
-    // concat, minify and revision files. Creates configurations in memory so
-    // additional tasks can operate on them
-    useminPrepare: {
-      options: {
-        dest: '<%= config.dist %>'
-      },
-      html: '<%= config.app %>/index.html'
-    },
-
-    // Performs rewrites based on rev and the useminPrepare configuration
-    usemin: {
-      options: {
-        assetsDirs: [
-          '<%= config.dist %>',
-          '<%= config.dist %>/images',
-          '<%= config.dist %>/styles'
-        ]
-      },
-      html: ['<%= config.dist %>/{,*/}*.html'],
-      css: ['<%= config.dist %>/styles/{,*/}*.css']
-    },
-
-    // The following *-min tasks produce minified files in the dist folder
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
-
-    svgmin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= config.dist %>/images'
-        }]
-      }
-    },
-
-    htmlmin: {
-      dist: {
-        options: {
-          collapseBooleanAttributes: true,
-          collapseWhitespace: true,
-          conservativeCollapse: true,
-          removeAttributeQuotes: true,
-          removeCommentsFromCDATA: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true,
-          removeRedundantAttributes: true,
-          useShortDoctype: true
-        },
-        files: [{
-          expand: true,
-          cwd: '<%= config.dist %>',
-          src: '{,*/}*.html',
-          dest: '<%= config.dist %>'
-        }]
-      }
-    },
-
-    // By default, your `index.html`'s <!-- Usemin block --> will take care
-    // of minification. These next options are pre-configured if you do not
-    // wish to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= config.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/scripts/scripts.js': [
-    //         '<%= config.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
-
-    // Copies remaining files to places other tasks can use
-    copy: {
-      dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= config.app %>',
-          dest: '<%= config.dist %>',
-          src: [
-            '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
-            '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
-          ]
-        }, {
-          src: 'node_modules/apache-server-configs/dist/.htaccess',
-          dest: '<%= config.dist %>/.htaccess'
-        }, {
-          expand: true,
-          dot: true,
-          cwd: '.',
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-          dest: '<%= config.dist %>'
-        }, {
-          expand: true,
-          dot: true,
-          cwd: '.',
-          src: 'bower_components/components-font-awesome/fonts/*',
-          dest: ''
-        }]
-      },
-      styles: {
-        expand: true,
-        dot: true,
-        cwd: '<%= config.app %>/styles',
-        dest: 'app/styles/', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
-        src: '{,*/}*.css'
-      }
-    },
-
-    // Generates a custom Modernizr build that includes only the tests you
-    // reference in your app
-    modernizr: {
-      dist: {
-        devFile: 'bower_components/modernizr/modernizr.js',
-        outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
-        files: {
-          src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '!<%= config.dist %>/scripts/vendor/*'
-          ]
-        },
-        uglify: true
-      }
-    },
-
-    // Run some tasks in parallel to speed up build process
-    concurrent: {
-      server: [
-        'sass:server',
-        'copy:styles'
-      ],
-      test: [
-        'copy:styles'
-      ],
-      dist: [
-        'sass',
-        'copy:styles',
-        'imagemin',
-        'svgmin'
-      ]
-    }
-  });
-
-
-  grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
-    if (grunt.option('allow-remote')) {
-      grunt.config.set('connect.options.hostname', '0.0.0.0');
-    }
-    if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
-    }
-
-    grunt.task.run([
-      'clean:server',
-      'wiredep',
-      'concurrent:server',
-      'autoprefixer',
-      'connect:livereload',
-      'watch'
-    ]);
-  });
-
-  grunt.registerTask('server', function (target) {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run([target ? ('serve:' + target) : 'serve']);
-  });
-
-  grunt.registerTask('test', function (target) {
-    if (target !== 'watch') {
-      grunt.task.run([
-        'clean:server',
-        'concurrent:test',
-        'autoprefixer'
-      ]);
-    }
-
-    grunt.task.run([
-      'connect:test',
-      'mocha'
-    ]);
-  });
-
-  grunt.registerTask('build', [
-    'clean:dist',
-    'wiredep',
-    'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'cssmin',
-    'uglify',
-    'copy:dist',
-    'modernizr',
-    'rev',
-    'usemin',
-    'htmlmin'
-  ]);
-
-  grunt.registerTask('default', [
-    'newer:jshint',
-    'test',
-    'build'
-  ]);
 };

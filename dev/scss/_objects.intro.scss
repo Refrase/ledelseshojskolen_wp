@@ -1,0 +1,17 @@
+/* ----- Intro ----- */
+
+.intro {
+	background: url(images/mark.jpg) no-repeat center;
+	background-size: cover;
+	padding-bottom: $dist-xxxl; }
+
+.row-intro img {
+	position: relative;
+	display: block;
+	width: 56px;
+	margin: 0 auto; }
+
+.row-intro h1,
+.row-intro h3,  {
+	text-align: center;
+	color: $clr-sec1; }

@@ -1,0 +1,58 @@
+/*!
+Theme Name: Ledelseshojskolen
+Author: Andreas Reffstrup Rasmussen
+Author URI: http://andreasreffstrup.com
+Description: Special made theme for ledelseshojskolen.dk
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: orange, green, bold
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ----- Fra Yeoman-build ----- */
+
+$grid-float-breakpoint: 798px; // Point for the navbar to put links into collapse
+
+@import "bootstrap/_bootstrap.scss";
+@import "bourbon/_bourbon.scss";
+@import "font-awesome/scss/font-awesome.scss";
+
+/* ----- Partials ----- */
+
+// Settings: Variabler (Sass)
+@import "settings.colors";
+@import "settings.margins";
+
+// Tools: Mixins + funktioner (Sass)
+@import "tools.mixins";
+
+// Generic: Resets + globale styles
+@import "generic.global";
+
+// Elements: Html-elementer u. classes
+@import "elements.typography";
+@import "elements.forms";
+@import "elements.containers";
+
+// Objects: Dele af siden
+@import "objects.nav";
+@import "objects.intro";
+@import "objects.video";
+@import "objects.hvadhvof";
+@import "objects.nhojsktilm";
+@import "objects.faelskab";
+@import "objects.tidlhoj";
+@import "objects.footer";
+
+// Components: Specifikke dele af elementer
+@import "components.buttons";
+
+// Trumps: Clearfix o.l.
+
+/* ----- Main ----- */
+
+html {
+	overflow-x: hidden; }

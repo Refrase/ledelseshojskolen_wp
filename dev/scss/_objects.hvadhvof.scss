@@ -1,0 +1,14 @@
+/* ----- Hvad & Hvorfor ----- */
+
+.row-hvadhvof h2 {
+	color: $clr-pri1; }
+
+.ungmand1 {
+	width: 300px;
+	height: 550px;
+	margin-left: calc(8.33333333% + 15px);
+	background:
+	  linear-gradient($clr-sec3-rgba1, $clr-sec3-rgba1),
+		url(images/kvinde_forklarer.jpg) top;
+	background-size: cover;
+	background-blend-mode: overlay; }
