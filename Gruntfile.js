@@ -61,8 +61,8 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= config.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
+          '<%= config.app %>/{,*/}*.{html,php}', // Changed from 'html' to {html,php} for use with PHP (MAMP AND WP)
+          'app/styles/{,*/}*.css', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
           '<%= config.app %>/images/{,*/}*'
         ]
       }
@@ -160,7 +160,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/styles',
           src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
+          dest: 'app/styles', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
           ext: '.css'
         }]
       },
@@ -169,7 +169,7 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '<%= config.app %>/styles',
           src: ['*.{scss,sass}'],
-          dest: '.tmp/styles',
+          dest: 'app/styles', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
           ext: '.css'
         }]
       }
@@ -183,9 +183,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
+          cwd: 'app/styles/', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
           src: '{,*/}*.css',
-          dest: '.tmp/styles/'
+          dest: 'app/styles/' // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
         }]
       }
     },
@@ -348,7 +348,7 @@ module.exports = function (grunt) {
         expand: true,
         dot: true,
         cwd: '<%= config.app %>/styles',
-        dest: '.tmp/styles/',
+        dest: 'app/styles/', // Changed from '.tmp' to 'app' for use with PHP (MAMP AND WP)
         src: '{,*/}*.css'
       }
     },
