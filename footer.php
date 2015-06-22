@@ -18,7 +18,9 @@
           <ul class="footer-btm-left">
             <li>Hornsherredvej 416A</li>
             <li>4070 Kirke Hyllinge</li>
-            <li>dennis.rasmussen@playingfield.dk</li>
+            <a href="mailto:dennis.rasmussen@playingfield.dk">
+              <li>dennis.rasmussen@playingfield.dk</li>
+            </a>
             <li>+45 42 68 01 40</li>
           </ul>
 
