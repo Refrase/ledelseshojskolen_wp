@@ -9616,14 +9616,12 @@ button.close {
 
 /* ----- Headings ----- */
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 1px;
   color: #32281e;
   margin-bottom: 16px;
 }
 
 h1 {
   font-size: 4.5em;
-  letter-spacing: 4px;
 }
 
 h2 {
@@ -9813,6 +9811,10 @@ section {
   color: #32281e;
 }
 
+.row-intro h1 {
+  letter-spacing: 2px;
+}
+
 /* ----- Video ----- */
 section.video {
   padding: 0;
@@ -9821,15 +9823,6 @@ section.video {
 /* ----- Hvad & Hvorfor ----- */
 .row-hvadhvof h2 {
   color: #ff5000;
-}
-
-.ungmand1 {
-  width: 300px;
-  height: 550px;
-  margin-left: calc(8.33333333% + 15px);
-  background: linear-gradient(rgba(250, 245, 240, 0.6), rgba(250, 245, 240, 0.6)), url(images/kvinde_forklarer.jpg) top;
-  background-size: cover;
-  background-blend-mode: overlay;
 }
 
 /* ----- Næste højskole & Tilmelding ----- */
@@ -9887,6 +9880,10 @@ section.video {
   width: 100px;
 }
 
+.form-nhojsktilm_checkbmedlemsk {
+  margin-bottom: 0;
+}
+
 .btn-tilmeld {
   background: #256956;
 }
@@ -9896,6 +9893,10 @@ section.video {
 }
 
 /* ----- LH-Fællesskabet ----- */
+section.faelskab {
+  padding-top: 260px;
+}
+
 .faelskab h2 {
   width: 100%;
   text-align: center;
@@ -9960,35 +9961,35 @@ section.video {
 }
 
 .lh-gruppen li:nth-child(1):after {
-  content: 'Dennis \A Rasmussen';
+  content: 'Dennis\A Rasmussen';
 }
 
 .lh-gruppen li:nth-child(2):after {
-  content: 'Claus \A Dahl';
+  content: 'Claus\A Dahl';
 }
 
 .lh-gruppen li:nth-child(3):after {
-  content: 'Ole \A Dissing';
+  content: 'Ole\A Dissing';
 }
 
 .lh-gruppen li:nth-child(4):after {
-  content: 'Jens \A Larsen';
+  content: 'Jens\A Larsen';
 }
 
 .lh-gruppen li:nth-child(5):after {
-  content: 'Carsten \A Reves';
+  content: 'Carsten\A Reves';
 }
 
 .adv-board li:nth-child(1):after {
-  content: 'Ole \A Petersen';
+  content: 'Ole\A Pedersen';
 }
 
 .adv-board li:nth-child(2):after {
-  content: 'Lisbet \A Lentz';
+  content: 'Lisbet\A Lentz';
 }
 
 .adv-board li:nth-child(3):after {
-  content: 'Lars \A Holten';
+  content: 'Lars\A Holten';
 }
 
 .adv-board li:nth-child(4):after {
@@ -10269,6 +10270,10 @@ footer .form-control {
 .btn {
   width: 100%;
   height: 40px;
+}
+
+a.btn {
+  line-height: 1.9em;
 }
 
 .btn-default {

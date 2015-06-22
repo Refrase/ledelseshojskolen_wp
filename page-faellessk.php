@@ -23,7 +23,7 @@
 
             <h4 class="col-md-offset-1 col-md-2">Advisory Board</h4>
             <ul class="faelskab_billeder adv-board col-md-7">
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/ole_petersen-128x192.jpg" alt="Ole Petersen"></li>
+              <li><img src="<?php bloginfo('template_directory'); ?>/images/ole_pedersen-128x192.jpg" alt="Ole Pedersen"></li>
               <li><img src="<?php bloginfo('template_directory'); ?>/images/lisbet_lentz-128x192.jpg" alt="Lisbet Lentz"></li>
               <li><img src="<?php bloginfo('template_directory'); ?>/images/lars_holten-128x192.jpg" alt="Lars Holten"></li>
               <li><img src="<?php bloginfo('template_directory'); ?>/images/dennis_rasmussen-128x192.jpg" alt="Kommer..."></li>

@@ -1,5 +1,8 @@
 /* ----- LH-Fællesskabet ----- */
 
+section.faelskab {
+	padding-top: $dist-xxxl + $dist-xl; }
+
 .faelskab h2 {
 	width: 100%;
 	text-align: center;
@@ -53,22 +56,22 @@
   padding-top: 60%; }
 
 .lh-gruppen li:nth-child(1):after {
-	content: 'Dennis \A Rasmussen'; }
+	content: 'Dennis\A Rasmussen'; }
 .lh-gruppen li:nth-child(2):after {
-	content: 'Claus \A Dahl'; }
+	content: 'Claus\A Dahl'; }
 .lh-gruppen li:nth-child(3):after {
-	content: 'Ole \A Dissing'; }
+	content: 'Ole\A Dissing'; }
 .lh-gruppen li:nth-child(4):after {
-	content: 'Jens \A Larsen'; }
+	content: 'Jens\A Larsen'; }
 .lh-gruppen li:nth-child(5):after {
-	content: 'Carsten \A Reves'; }
+	content: 'Carsten\A Reves'; }
 
 .adv-board li:nth-child(1):after {
-	content: 'Ole \A Petersen'; }
+	content: 'Ole\A Pedersen'; }
 .adv-board li:nth-child(2):after {
-	content: 'Lisbet \A Lentz'; }
+	content: 'Lisbet\A Lentz'; }
 .adv-board li:nth-child(3):after {
-	content: 'Lars \A Holten'; }
+	content: 'Lars\A Holten'; }
 .adv-board li:nth-child(4):after {
 	content: 'Kommer...'; }
 .adv-board li:nth-child(5):after {

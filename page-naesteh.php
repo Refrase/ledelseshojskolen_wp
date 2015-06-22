@@ -12,26 +12,33 @@
         <article class="row row-nhojsktilm row-nhojsktilm_intro">
           <div class="col-sm-5">
             <div class="col-sm-10">
-            <h2><?php the_title(); ?></h2>
-            <p><?php the_content(); ?></p>
+	            <h2><?php the_title(); ?></h2>
+	            <p><?php the_content(); ?></p>
 
-            <h3>Den Skabende Kraft i Ledelse</h3>
-            <h4>16. - 18. november 2015</h4>
-            <ul>
-              <li><b>Den Frie Lærerskole</b></li>
-              <li>Svendborgvej 15</li>
-              <li>5762 Vester Skerninge</li>
-              <li>Ollerup, Svendborg</li>
-            </ul>
-            <p>9.995,- eks. moms</p>
+	            <h3><?php the_field( 'tema' ); ?></h3>
+	            <h4><?php the_field( 'dato' ); ?></h4>
+	            <ul>
+	              <li><b><?php the_field( 'sted' ); ?></b></li>
+	              <li><?php the_field( 'vej' ); ?></li>
+	              <li><?php the_field( 'by' ); ?></li>
+	              <li><?php the_field( 'område' ); ?></li>
+	            </ul>
+	            <p><?php the_field( 'pris' ); ?></p>
             </div>
 
             <div class="col-sm-4">
-              <button class="btn btn-default btn-program">Program</button>
+            	<?php if( get_field('program') ) { ?>
+              	<a href="<?php the_field( 'program' ); ?>" class="btn btn-default btn-program">Program</a>
+              <?php } else { ?>
+								<button class="btn btn-default btn-program">Program</button>
+              <?php } ?>
             </div>
 
             <div class="col-sm-12">
-              <img class="logo-nhojsktilm" src="<?php bloginfo('template_directory'); ?>/images/logo_dfl_sort.png" />
+	            <?php $image = get_field( 'logo' ); ?>
+	            <?php if( !empty($image) ) { ?>
+	              <img class="logo-nhojsktilm" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	            <?php } ?>
             </div>
           </div>
 
@@ -45,7 +52,7 @@
               <h3>Tilmelding</h3>
               <p class="help-block">Tilmeldingen er bindende fra en måned før afholdelse. Din tilmelding bekræftes automatisk pr. mail.
               <br>
-              Invitation og endeligt program fremsendes ca. 3 uger<br> før afholdelse.</p>
+              Invitation og endeligt program fremsendes ca. 3 uger<br> før afholdelse på mail.</p>
             </div>
           </div>
           <div class="form-group">
@@ -78,7 +85,7 @@
               <textarea class="form-control" id="tilmBesk"></textarea>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-group form-nhojsktilm_checkbmedlemsk">
             <div class="col-sm-offset-3 col-sm-9">
               <div class="checkbox">
                 <label>
@@ -89,6 +96,18 @@
                   <br>
                   10% rabat på ledelseshøjskoler, nyhedsbrev, invitationer til særarrangementer, mulighed for at holde oplæg på <br>ledelseshøjskolen og inspirerende netværk. <br>
                   Medlemskabet er gratis.
+                </p>
+              </div>
+            </div>
+          </div>
+					<div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Nyhedsbrev
+                </label>
+                <p class="help-block">
+                  Udsende 2-4 gange om året.
                 </p>
               </div>
             </div>

@@ -13,8 +13,8 @@ get_header(); ?>
     <div class="container">
       <article class="row row-intro">
 
-        <img src="<?php bloginfo('template_directory'); ?>/images/icons/ic_sommerf_mbrun.svg" />
-       	<?php wp_reset_query(); ?>
+				<?php wp_reset_query(); ?>
+        <?php the_post_thumbnail(); ?>
         <h1><?php the_title(); ?></h1>
         <h3><?php the_content(); ?></h3>
 
@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php get_template_part( 'page', 'historie' ); ?>
 		<?php } ?>
 
-	<?php endwhile; endif; ?>
+	<?php endwhile; endif; wp_reset_query(); ?>
 
 <?php get_footer(); ?>
 
