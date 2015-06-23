@@ -10,10 +10,10 @@ get_header(); ?>
 <!--//////////////////// Introduktion \\\\\\\\\\\\\\\\\\\\-->
 
   <section id="<?php echo $post->post_name; ?>" <?php echo post_class( 'intro' ); ?>>
+  <?php wp_reset_postdata(); ?>
     <div class="container">
       <article class="row row-intro">
 
-				<?php wp_reset_query(); ?>
         <?php the_post_thumbnail(); ?>
         <h1><?php the_title(); ?></h1>
         <h3><?php the_content(); ?></h3>
@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php get_template_part( 'page', 'historie' ); ?>
 		<?php } ?>
 
-	<?php endwhile; endif; wp_reset_query(); ?>
+	<?php endwhile; endif; wp_reset_postdata(); ?>
 
 <?php get_footer(); ?>
 

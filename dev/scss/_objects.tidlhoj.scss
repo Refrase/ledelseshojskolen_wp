@@ -59,7 +59,8 @@
 
 .tidlhoj-beskr h3 { // Sted
 	font-style: normal;
-	color: $clr-pri1; }
+	color: $clr-pri1;
+	font-weight: 400; }
 
 .btn-dokushop {
 	margin-top: $dist-l;
@@ -97,33 +98,13 @@
 	border-top-right-radius: $dist-s;
 	border-bottom-right-radius: $dist-s; }
 
-// .tl-p1-contpic-overl {
-// 	background: rgba(158, 161, 178, 0.90); }
-
-// .tl-p2-contpic-overl {
-// 	background: rgba(163, 158, 61, 0.90); }
-
-// .tl-p3-contpic-overl {
-// 	background: rgba(54, 158, 218, 0.90); }
-
 .tidlhoj-pic {
+	display: block;
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: calc(100% + 32px);
-	background-size: cover;
-	background-repeat: no-repeat;
+	top: 0;
+	left: 0;
+	min-width: 100%;
 	z-index: -10; }
-
-.tl-p1-contpic {
-	background-image: url(images/dsw-01-1280x956.jpg); }
-
-.tl-p2-contpic {
-	background-image: url(images/dfl-01-800x600.jpg); }
-
-.tl-p3-contpic {
-	background-image: url(images/born-faldskaerm-1280x783.jpg); }
 
 
 

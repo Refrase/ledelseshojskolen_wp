@@ -9868,7 +9868,6 @@ section.video {
 .btn-program {
   background: #ff5000;
   margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 .btn-program:hover {
@@ -9876,6 +9875,7 @@ section.video {
 }
 
 .logo-nhojsktilm {
+  margin-top: 32px;
   display: block;
   width: 100px;
 }
@@ -9904,8 +9904,7 @@ section.faelskab {
 }
 
 .faelskab h4 {
-  text-align: right;
-  padding-top: 70px;
+  text-align: center;
 }
 
 .faelskab_billeder {
@@ -9992,15 +9991,8 @@ section.faelskab {
   content: 'Lars\A Holten';
 }
 
-.adv-board li:nth-child(4):after {
-  content: 'Kommer...';
-}
-
-.adv-board li:nth-child(5):after {
-  content: 'Kommer...';
-}
-
 .btn-medlemmer {
+  margin-top: 32px;
   background: #b4aaa0;
 }
 
@@ -10127,6 +10119,7 @@ section.faelskab {
 .tidlhoj-beskr h3 {
   font-style: normal;
   color: #ff5000;
+  font-weight: 400;
 }
 
 .btn-dokushop {
@@ -10171,26 +10164,12 @@ section.faelskab {
 }
 
 .tidlhoj-pic {
+  display: block;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: calc(100% + 32px);
-  background-size: cover;
-  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  min-width: 100%;
   z-index: -10;
-}
-
-.tl-p1-contpic {
-  background-image: url(images/dsw-01-1280x956.jpg);
-}
-
-.tl-p2-contpic {
-  background-image: url(images/dfl-01-800x600.jpg);
-}
-
-.tl-p3-contpic {
-  background-image: url(images/born-faldskaerm-1280x783.jpg);
 }
 
 /* ----- Footer ----- */

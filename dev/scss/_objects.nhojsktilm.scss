@@ -33,12 +33,13 @@
 
 .btn-program {
 	background: $clr-pri1;
-	@include marg-top-btm($dist-l); }
+	margin-top: $dist-l; }
 
 .btn-program:hover {
 	background: $clr-pri1-sha1; }
 
 .logo-nhojsktilm {
+	margin-top: $dist-l;
 	display: block;
 	width: 100px; }
 

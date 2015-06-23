@@ -26,11 +26,10 @@
 	            <p><?php the_field( 'pris' ); ?></p>
             </div>
 
+						<!-- Load kun program, hvis der faktisk er et at linke til -->
             <div class="col-sm-4">
             	<?php if( get_field('program') ) { ?>
               	<a href="<?php the_field( 'program' ); ?>" class="btn btn-default btn-program">Program</a>
-              <?php } else { ?>
-								<button class="btn btn-default btn-program">Program</button>
               <?php } ?>
             </div>
 
@@ -45,7 +44,7 @@
         </article>
       </div>
 
-      <article class="nhojsktilm_tilm col-sm-offset-6 col-sm-6">
+      <article class="nhojsktilm_tilm col-sm-offset-6 col-md-6">
         <form class="form-nhojsktilm form-horizontal">
           <div class="form-group">
             <div class="col-sm-offset-3 col-sm-7">
@@ -92,8 +91,6 @@
                   <input type="checkbox"> Medlemskab
                 </label>
                 <p class="help-block">
-                  Medlemskab af ledelseshøjskolefællesskabet indebærer:
-                  <br>
                   10% rabat på ledelseshøjskoler, nyhedsbrev, invitationer til særarrangementer, mulighed for at holde oplæg på <br>ledelseshøjskolen og inspirerende netværk. <br>
                   Medlemskabet er gratis.
                 </p>

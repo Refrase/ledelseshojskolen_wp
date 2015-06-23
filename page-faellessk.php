@@ -12,28 +12,64 @@
           <h2><?php the_title(); ?></h2>
 
           <div class="row">
-            <h4 class="col-md-offset-1 col-md-2">LH Gruppen</h4>
-            <ul class="faelskab_billeder lh-gruppen col-md-7">
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/dennis_rasmussen-128x192.jpg" alt="Dennis Rasmussen"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/claus_dahl-128x192.jpg" alt="Claus Dahl"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/ole_dissing-128x192.jpg" alt="Ole Dissing"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/jens_larsen-128x192.jpg" alt="Jens Larsen"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/carsten_reves-128x192.jpg" alt="Carsten Reves"></li>
-            </ul>
+            <h4 class="col-sm-12"><?php the_field( 'grp1_titel' ); ?></h4>
+            <ul class="faelskab_billeder lh-gruppen col-md-offset-3 col-md-6">
 
-            <h4 class="col-md-offset-1 col-md-2">Advisory Board</h4>
-            <ul class="faelskab_billeder adv-board col-md-7">
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/ole_pedersen-128x192.jpg" alt="Ole Pedersen"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/lisbet_lentz-128x192.jpg" alt="Lisbet Lentz"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/lars_holten-128x192.jpg" alt="Lars Holten"></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/dennis_rasmussen-128x192.jpg" alt="Kommer..."></li>
-              <li><img src="<?php bloginfo('template_directory'); ?>/images/dennis_rasmussen-128x192.jpg" alt="Kommer..."></li>
+							<?php // Create array: $fields = [ 'lh_grp_medl1', 'lh_grp_medl2', ... ];
+								// Er lige nu sat til at der kan tilføjes op til 20 medlemmer i WP
+								$fields_lh = [];
+								for ( $i = 1; $i < 20; $i++ ) {
+									$field = 'lh_grp_medl' . $i;
+									array_push($fields_lh, $field);
+								}
+
+								// Create array: $members, with member objects to get ['url'] + ['alt']
+								$members_lh = [];
+								for ( $i = 0; $i <= 20; $i++ ) {
+									// ACF-function to get field (member) object
+									$member = get_field( $fields_lh[$i] );
+									if ( $member ) {
+										array_push($members_lh, $member); ?>
+										<li>
+											<img src="<?php echo $members_lh[$i]['url']; ?>" alt="<?php echo $members_lh[$i]['alt']; ?>" />
+										</li> <?php
+								  }
+								} ?>
+
+            </ul>
+					</div>
+
+					<div class="row">
+            <h4 class="col-sm-12"><?php the_field( 'grp2_titel' ); ?></h4>
+            <ul class="faelskab_billeder adv-board col-md-offset-3 col-md-6">
+
+							<?php // Create array: $fields = [ 'lh_grp_medl1', 'lh_grp_medl2', ... ];
+								// Er lige nu sat til at der kan tilføjes op til 20 medlemmer i WP
+								$fields_ab = [];
+								for ( $i = 1; $i < 20; $i++ ) {
+									$field = 'adv_brd_medl' . $i;
+									array_push($fields_ab, $field);
+								}
+
+								// Create array: $members, with member objects to get ['url'] + ['alt']
+								$members_ab = [];
+								for ( $i = 0; $i <= 20; $i++ ) {
+									// ACF-function to get field (member) object
+									$member = get_field( $fields_ab[$i] );
+									if ( $member ) {
+										array_push($members_ab, $member); ?>
+										<li>
+											<img src="<?php echo $members_ab[$i]['url']; ?>" alt="<?php echo $members_ab[$i]['alt']; ?>" />
+										</li> <?php
+								  }
+								} ?>
+
             </ul>
           </div>
 
           <div class="row">
             <div class="col-sm-offset-5 col-sm-2">
-              <button class="btn btn-default btn-medlemmer">Medlemmer</button>
+              <button class="btn btn-default btn-medlemmer"><?php the_field( 'medlemmer' ); ?></button>
             </div>
           </div>
 

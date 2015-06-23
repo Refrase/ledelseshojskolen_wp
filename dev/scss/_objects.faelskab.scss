@@ -9,8 +9,7 @@ section.faelskab {
 	margin-bottom: $dist-l; }
 
 .faelskab h4 {
-	text-align: right;
-	padding-top: 70px; }
+	text-align: center; }
 
 .faelskab_billeder {
 	display: flex;
@@ -72,12 +71,9 @@ section.faelskab {
 	content: 'Lisbet\A Lentz'; }
 .adv-board li:nth-child(3):after {
 	content: 'Lars\A Holten'; }
-.adv-board li:nth-child(4):after {
-	content: 'Kommer...'; }
-.adv-board li:nth-child(5):after {
-	content: 'Kommer...'; }
 
 .btn-medlemmer {
+	margin-top: $dist-l;
 	background: $clr-sec2; }
 
 .btn-medlemmer:hover {
