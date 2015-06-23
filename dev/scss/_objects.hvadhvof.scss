@@ -2,3 +2,7 @@
 
 .row-hvadhvof h2 {
 	color: $clr-pri1; }
+
+@media (max-width: 768px) {
+.row-hvadhvof_billede {
+	margin-bottom: $dist-xl; } }

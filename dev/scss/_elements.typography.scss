@@ -26,8 +26,7 @@ h2, h3 {
 	font-style: italic; }
 
 h3 {
-	font-size: $text-l;
-	font-weight: 600; }
+	font-size: $text-l; }
 
 h4 {
 	font-size: $text-m; }
@@ -54,3 +53,16 @@ cite {
 	font-weight: 300;
 	font-size: $text-xxs;
 	color: $clr-sec1; }
+
+@media (max-width: 768px) {
+	h1 { font-size: $text-xxl - 1.5em; font-weight: 600;}
+	h2 { font-size: $text-xl - 0.3em; }
+	h3 { font-size: $text-l - 0.4em; }}
+
+@media (max-width: 500px) {
+	h1 { font-size: $text-xxl - 2em; }}
+
+
+
+
+

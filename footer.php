@@ -1,6 +1,6 @@
  <footer id="nyhedsb">
       <div class="container-fluid">
-        <form class="form form-newsletter form-horizontal col-sm-6 col-sm-offset-3">
+        <form class="form form-newsletter form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
           <div class="form-group">
             <h2>Nyhedsbrev</h2>
             <div class="col-sm-8">

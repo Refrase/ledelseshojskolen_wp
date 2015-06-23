@@ -12,6 +12,8 @@ footer .form h2 {
 
 footer .form-control { margin-bottom: $dist-m; }
 
+footer .help-block { margin-bottom: $dist-m; }
+
 // Nederste del af footer
 .footer-btm {
 	padding: $dist-m;
@@ -49,3 +51,18 @@ footer .form-control { margin-bottom: $dist-m; }
 
 .footer-btm-right li i {
 	position: relative; }
+
+@media (max-width: 880px) {
+	.footer-btm-left { padding-left: 0; }
+	.footer-btm-right { padding-right: 0; }}
+
+@media (max-width: 768px) {
+	.footer-btm {
+		@include flex-direction(column);
+		@include align-items(center);
+		height: 400px; }
+
+	.footer-btm-left { order: 1; }
+	.footer-btm-left li { text-align: center; }
+	.footer-btm-right { order: 2; }
+	.footer-btm-center { order: 3; }}

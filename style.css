@@ -9635,7 +9635,6 @@ h2, h3 {
 
 h3 {
   font-size: 1.5em;
-  font-weight: 600;
 }
 
 h4 {
@@ -9674,6 +9673,25 @@ cite {
   color: #32281e;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3em;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.9em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
 /* ----- Forms ----- */
 .form-group {
   margin-bottom: 24px;
@@ -9703,6 +9721,13 @@ section {
 
 .hvadhvof .row:not(:first-child) {
   margin-top: 64px;
+}
+
+@media (max-width: 960px) {
+  section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 /* ----- Nav ----- */
@@ -9795,6 +9820,7 @@ section {
 .intro {
   background: url(images/mark.jpg) no-repeat center;
   background-size: cover;
+  padding-top: 112px;
   padding-bottom: 196px;
 }
 
@@ -9803,6 +9829,7 @@ section {
   display: block;
   width: 56px;
   margin: 0 auto;
+  padding-bottom: 8px;
 }
 
 .row-intro h1,
@@ -9812,7 +9839,27 @@ section {
 }
 
 .row-intro h1 {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.row-intro h3 {
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .row-intro img {
+    width: 48px;
+  }
+}
+
+@media (max-width: 500px) {
+  .row-intro img {
+    width: 42px;
+  }
+  .row-intro h3 {
+    width: 260px;
+  }
 }
 
 /* ----- Video ----- */
@@ -9823,6 +9870,12 @@ section.video {
 /* ----- Hvad & Hvorfor ----- */
 .row-hvadhvof h2 {
   color: #ff5000;
+}
+
+@media (max-width: 768px) {
+  .row-hvadhvof_billede {
+    margin-bottom: 64px;
+  }
 }
 
 /* ----- Næste højskole & Tilmelding ----- */
@@ -10193,6 +10246,10 @@ footer .form-control {
   margin-bottom: 16px;
 }
 
+footer .help-block {
+  margin-bottom: 16px;
+}
+
 .footer-btm {
   padding: 16px;
   width: 100%;
@@ -10243,6 +10300,47 @@ footer .form-control {
 
 .footer-btm-right li i {
   position: relative;
+}
+
+@media (max-width: 880px) {
+  .footer-btm-left {
+    padding-left: 0;
+  }
+  .footer-btm-right {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-btm {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    height: 400px;
+  }
+  .footer-btm-left {
+    order: 1;
+  }
+  .footer-btm-left li {
+    text-align: center;
+  }
+  .footer-btm-right {
+    order: 2;
+  }
+  .footer-btm-center {
+    order: 3;
+  }
 }
 
 /* ----- Buttons ----- */
