@@ -6,7 +6,7 @@
 
 <!--//////////////////// Fællesskabet \\\\\\\\\\\\\\\\\\\\-->
 
-    <section id="<?php echo $post->post_name; ?>" <?php echo post_class( 'faelskab' ); ?>
+    <section id="<?php echo $post->post_name; ?>" <?php echo post_class( 'faelskab' ); ?>>
       <div class="container">
 
           <h2><?php the_title(); ?></h2>
@@ -68,7 +68,7 @@
           </div>
 
           <div class="row">
-            <div class="col-sm-offset-5 col-sm-2">
+            <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 col-md-2 col-md-offset-5">
               <button class="btn btn-default btn-medlemmer"><?php the_field( 'medlemmer' ); ?></button>
             </div>
           </div>

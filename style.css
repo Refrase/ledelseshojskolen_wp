@@ -9885,6 +9885,10 @@ section.video {
   position: relative;
 }
 
+.row-nhojsktilm_intro {
+  padding-bottom: 64px;
+}
+
 .row-nhojsktilm_intro h3 {
   margin-top: 32px;
 }
@@ -9901,6 +9905,7 @@ section.video {
 .nhojsktilm_tilm {
   position: absolute;
   top: 100px;
+  right: 0;
   background: #3caa8c;
   padding-top: 64px;
   padding-bottom: 64px;
@@ -9945,9 +9950,18 @@ section.video {
   background: #0e2921;
 }
 
+@media (max-width: 768px) {
+  .whitebox-nhojsktilm {
+    display: none;
+  }
+  .nhojsktilm_tilm {
+    top: 780px;
+  }
+}
+
 /* ----- LH-Fællesskabet ----- */
 section.faelskab {
-  padding-top: 260px;
+  padding-top: 200px;
 }
 
 .faelskab h2 {
@@ -10051,6 +10065,48 @@ section.faelskab {
 
 .btn-medlemmer:hover {
   background: #8f877f;
+}
+
+@media (max-width: 1200px) {
+  section.faelskab {
+    padding-top: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  section.faelskab {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 960px) {
+  section.faelskab {
+    padding-top: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.faelskab {
+    padding-top: 1100px;
+  }
+}
+
+@media (max-width: 640px) {
+  section.faelskab {
+    padding-top: 1100px;
+  }
+}
+
+@media (max-width: 520px) {
+  section.faelskab {
+    padding-top: 1150px;
+  }
+}
+
+@media (max-width: 480px) {
+  section.faelskab {
+    padding-top: 1200px;
+  }
 }
 
 /* ----- Tidliger Højskoler ----- */

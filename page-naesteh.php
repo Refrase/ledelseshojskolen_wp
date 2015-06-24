@@ -6,12 +6,12 @@
 
 <!--//////////////////// Næste Højskole & Tilmelding \\\\\\\\\\\\\\\\\\\\-->
 
-    <section id="<?php echo $post->post_name; ?>" <?php echo post_class( 'nhojsktilm' ); ?>>
-    <div class="whitebox-nhojsktilm"></div>
+  	<section id="<?php echo $post->post_name; ?>" <?php echo post_class( 'nhojsktilm' ); ?>>
+    	<div class="whitebox-nhojsktilm"></div>
       <div class="container">
         <article class="row row-nhojsktilm row-nhojsktilm_intro">
           <div class="col-sm-5">
-            <div class="col-sm-10">
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-10">
 	            <h2><?php the_title(); ?></h2>
 	            <p><?php the_content(); ?></p>
 
@@ -27,13 +27,13 @@
             </div>
 
 						<!-- Load kun program, hvis der faktisk er et at linke til -->
-            <div class="col-sm-4">
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-4">
             	<?php if( get_field('program') ) { ?>
               	<a href="<?php the_field( 'program' ); ?>" class="btn btn-default btn-program">Program</a>
               <?php } ?>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-12">
 	            <?php $image = get_field( 'logo' ); ?>
 	            <?php if( !empty($image) ) { ?>
 	              <img class="logo-nhojsktilm" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
@@ -44,61 +44,60 @@
         </article>
       </div>
 
-      <article class="nhojsktilm_tilm col-sm-offset-6 col-md-6">
+      <article class="nhojsktilm_tilm col-sm-offset-6 col-md-7">
         <form class="form-nhojsktilm form-horizontal">
-          <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-7">
+          <div class="form-group col-xs-10 col-sm-12">
+            <div class="col-xs-offset-1 col-sm-10 col-sm-offset-2 col-md-7 col-md-offset-4">
               <h3>Tilmelding</h3>
               <p class="help-block">Tilmeldingen er bindende fra en måned før afholdelse. Din tilmelding bekræftes automatisk pr. mail.
-              <br>
-              Invitation og endeligt program fremsendes ca. 3 uger<br> før afholdelse på mail.</p>
+              Invitation og endeligt program fremsendes ca. 3 uger før afholdelse på mail.</p>
             </div>
           </div>
-          <div class="form-group">
-            <label for="tilmForn" class="control-label col-sm-offset-1 col-sm-2">Fornavn*</label>
-            <div class="col-sm-7">
+          <div class="form-group col-xs-10 col-sm-12">
+            <label for="tilmForn" class="control-label col-xs-offset-1 col-sm-offset-1 col-sm-4 col-lg-3">Fornavn*</label>
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-7">
               <input required type="text" class="form-control" id="tilmForn">
             </div>
           </div>
-          <div class="form-group">
-            <label for="tilmEftern" class="control-label col-sm-offset-1 col-sm-2">Efternavn*</label>
-            <div class="col-sm-7">
+          <div class="form-group col-xs-10 col-sm-12">
+            <label for="tilmEftern" class="control-label col-xs-offset-1 col-sm-offset-1 col-sm-4 col-lg-3">Efternavn*</label>
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-7">
               <input required type="text" class="form-control" id="tilmEftern">
             </div>
           </div>
-          <div class="form-group">
-            <label for="tilmMail" class="control-label col-sm-offset-1 col-sm-2">Mail*</label>
-            <div class="col-sm-7">
+          <div class="form-group col-xs-10 col-sm-12">
+            <label for="tilmMail" class="control-label col-xs-offset-1 col-sm-offset-1 col-sm-4 col-lg-3">Mail*</label>
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-7">
               <input required type="email" class="form-control" id="tilmMail">
             </div>
           </div>
-          <div class="form-group">
-            <label for="tilmOrg" class="control-label col-sm-offset-1 col-sm-2">Organisation</label>
-            <div class="col-sm-7">
+          <div class="form-group col-xs-10 col-sm-12">
+            <label for="tilmOrg" class="control-label col-xs-offset-1 col-sm-offset-1 col-sm-4 col-lg-3">Organisation</label>
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-7">
               <input type="text" class="form-control" id="tilmOrg">
             </div>
           </div>
-          <div class="form-group">
-            <label for="tilmBesk" class="control-label col-sm-offset-1 col-sm-2">Besked</label>
-            <div class="col-sm-7">
+          <div class="form-group col-xs-10 col-sm-12">
+            <label for="tilmBesk" class="control-label col-xs-offset-1 col-sm-offset-1 col-sm-4 col-lg-3">Besked</label>
+            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-7">
               <textarea class="form-control" id="tilmBesk"></textarea>
             </div>
           </div>
-          <div class="form-group form-nhojsktilm_checkbmedlemsk">
-            <div class="col-sm-offset-3 col-sm-9">
+          <div class="form-group form-nhojsktilm_checkbmedlemsk col-xs-10 col-sm-12">
+            <div class="col-xs-offset-1 col-sm-10 col-sm-offset-2 col-md-offset-4 col-md-7">
               <div class="checkbox">
                 <label>
                   <input type="checkbox"> Medlemskab
                 </label>
                 <p class="help-block">
-                  10% rabat på ledelseshøjskoler, nyhedsbrev, invitationer til særarrangementer, mulighed for at holde oplæg på <br>ledelseshøjskolen og inspirerende netværk. <br>
+                  10% rabat på ledelseshøjskoler, nyhedsbrev, invitationer til særarrangementer, mulighed for at holde oplæg på ledelseshøjskolen og inspirerende netværk.
                   Medlemskabet er gratis.
                 </p>
               </div>
             </div>
           </div>
-					<div class="form-group">
-            <div class="col-sm-offset-3 col-sm-9">
+					<div class="form-group col-xs-10 col-sm-12">
+            <div class="col-xs-offset-1 col-sm-10 col-sm-offset-2 col-md-offset-4 col-md-7">
               <div class="checkbox">
                 <label>
                   <input type="checkbox"> Nyhedsbrev
@@ -109,8 +108,8 @@
               </div>
             </div>
           </div>
-          <div class="form-group">
-            <div class="col-sm-offset-3 col-sm-3">
+          <div class="form-group col-xs-10 col-sm-12">
+            <div class="col-xs-offset-1 col-xs-6 col-xs-offset-0 col-sm-4 col-sm-offset-2 col-md-offset-4">
               <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
             </div>
           </div>

@@ -1,7 +1,7 @@
 /* ----- LH-Fællesskabet ----- */
 
 section.faelskab {
-	padding-top: $dist-xxxl + $dist-xl; }
+	padding-top: 200px; }
 
 .faelskab h2 {
 	width: 100%;
@@ -78,3 +78,31 @@ section.faelskab {
 
 .btn-medlemmer:hover {
 	background: $clr-sec2-sha1; }
+
+@media (max-width: 1200px) {
+	section.faelskab {
+		padding-top: 300px; }}
+
+@media (max-width: 992px) {
+	section.faelskab {
+		padding-top: 150px; }}
+
+@media (max-width: 960px) {
+	section.faelskab {
+		padding-top: 300px; }}
+
+@media (max-width: 768px) {
+	section.faelskab {
+		padding-top: 1100px; }}
+
+@media (max-width: 640px) {
+	section.faelskab {
+		padding-top: 1100px; }}
+
+@media (max-width: 520px) {
+	section.faelskab {
+		padding-top: 1150px; }}
+
+@media (max-width: 480px) {
+	section.faelskab {
+		padding-top: 1200px; }}
