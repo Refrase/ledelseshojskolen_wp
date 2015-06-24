@@ -46,7 +46,7 @@
               <li><a href="#naestehojskole">Næste Højskole</a></li>
               <li><a href="#faellesskabet">Fællesskabet</a></li>
               <li><a href="#historie">Historie</a></li>
-              <li><a href="#nyhedsb">Kontakt</a></li>
+              <li><a href="#footer">Kontakt</a></li>
               <li><a href="#">English</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

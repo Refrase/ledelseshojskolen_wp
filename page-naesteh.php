@@ -44,7 +44,7 @@
         </article>
       </div>
 
-      <article class="nhojsktilm_tilm col-sm-offset-6 col-md-7">
+      <article class="nhojsktilm_tilm col-sm-6 col-sm-offset-6 col-md-6">
         <form class="form-nhojsktilm form-horizontal">
           <div class="form-group col-xs-10 col-sm-12">
             <div class="col-xs-offset-1 col-sm-10 col-sm-offset-2 col-md-7 col-md-offset-4">
@@ -103,7 +103,7 @@
                   <input type="checkbox"> Nyhedsbrev
                 </label>
                 <p class="help-block">
-                  Udsende 2-4 gange om året.
+                  Udsendes 2-4 gange om året.
                 </p>
               </div>
             </div>
