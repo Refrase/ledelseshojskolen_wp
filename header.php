@@ -25,11 +25,11 @@
 
     <!--//////////////////// Navigation \\\\\\\\\\\\\\\\\\\\-->
     <header>
-      <nav class="navbar navbar-default navbar-fixed-top">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <a class="navbar-brand" href="#intro">Ledelseshøjskolen</a>
+            <a class="navbar-brand" href="#intro"><?php bloginfo('name'); ?></a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
@@ -40,15 +40,22 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="nav-main">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#om">Om<span class="sr-only">(current)</span></a></li>
-              <!--  <li><a href="#hvadhvof">Hvad &amp; Hvorfor</a></li> -->
-              <li><a href="#naestehojskole">Næste Højskole</a></li>
-              <li><a href="#faellesskabet">Fællesskabet</a></li>
-              <li><a href="#historie">Historie</a></li>
-              <li><a href="#footer">Kontakt</a></li>
-              <li><a href="#">English</a></li>
-            </ul>
+
+            <?php
+              $defaults = array(
+                'menu'            => 'Hovedmenu',
+                'theme_location'  => 'Hovedmenu',
+                'depth'           => 2,
+                // 'container'       => 'div',
+                // 'container_class' => 'collapse navbar-collapse',
+                // 'container_id'    => 'nav-main',
+                'menu_class'      => 'nav navbar-nav',
+                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                'walker'          => new wp_bootstrap_navwalker()
+              );
+              wp_nav_menu( $defaults );
+            ?>
+
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <a class="pf-link" href="http://www.playingfield.dk">
