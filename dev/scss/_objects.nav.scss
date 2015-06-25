@@ -23,10 +23,13 @@
 .navbar-default .navbar-nav > li > a {
 	color: $clr-sec3; }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > li > a:hover  {
+	color: $clr-sec3;
+	background: $clr-pri1-sha0; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus {
 	color: $clr-sec3;
 	background: $clr-pri1-sha1; }
 

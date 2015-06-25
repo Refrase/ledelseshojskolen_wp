@@ -47,14 +47,20 @@
 	display: block;
 	width: 100px; }
 
-.form-nhojsktilm_checkbmedlemsk {
-	margin-bottom: 0; }
-
 .btn-tilmeld {
 	background: $clr-pri2-sha1; }
 
 .btn-tilmeld:hover {
 	background: $clr-pri2-sha2; }
+
+// MailChimp for WP-plugin
+.tilmelding-besked { // Class added to .mc4wp-x classes in main.js
+	padding: $dist-m;
+	padding: $dist-m + $dist-s;
+	color: $clr-sec3;
+	background: $clr-pri2-sha1;
+	margin-bottom: $dist-m;
+	border-radius: $dist-xs; }
 
 @media (max-width: 768px) {
 	.whitebox-nhojsktilm { display: none; }

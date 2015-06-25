@@ -3,10 +3,15 @@ jQuery(document).ready(function($) {
 'use strict';
 
 	// Opdatér aktivt link i nav med .active state
-	$( '.nav a' ).on( 'click' , function(){
+	$( '.nav a' ).on( 'click' , function() {
     $( '.nav' ).find( '.active' ).removeClass( 'active' );
     $(this).parent().addClass( 'active' );
 	});
+
+	// Fjern aktivt stadie for links ved tryk på 'Ledelseshøjskolen'
+	$( '.navbar-brand' ).on( 'click' , function() {
+    $( '.nav' ).find( '.active' ).removeClass( 'active' );
+  });
 
 	// Animér scroll til #-link
 	$(function() {
@@ -54,6 +59,19 @@ jQuery(document).ready(function($) {
 	    });
 	  });
 	});
+
+	// MailChimp for WP plugin: Tilmeldingsformular
+	$('.mc4wp-form').addClass('form-nhojsktilm form-horizontal');
+	$('.mc4wp-alert, .mc4wp-success').addClass('tilmelding-besked');
+	$('.tilmelding-besked').insertAfter('.mc4wp-form h3');
+
+	// MailChimp for WP plugin: Checkbox
+	// Hidden inputs take on value of visible inputs, for the mc4wp-plugins checkbox functionality to work (subscription to an additional list (here: Medlemskab)). Hidden inputs created in form-markup in the Mailchimp for WP plugin in wp-admin.
+	$('#TILMFORN').change(function() { $('#mc4wp-TILMFORN').val( $('#TILMFORN').val() ); });
+	$('#TILMEFTERN').change(function() { $('#mc4wp-TILMEFTERN').val( $('#TILMEFTERN').val() ); });
+	$('#mc4wp_email').change(function() { $('#mc4wp-EMAIL').val( $('#mc4wp_email').val() ); });
+	$('#TILMORG').change(function() { $('#mc4wp-TILMORG').val( $('#TILMORG').val() ); });
+	$('#TILMBESK').change(function() { $('#mc4wp-TILMBESK').val( $('#TILMBESK').val() ); });
 
 	// Timeline (tidlhoj)
 	$('.tl-punkt').click(function() {

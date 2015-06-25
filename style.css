@@ -9713,6 +9713,10 @@ cite {
   color: #256956;
 }
 
+.mc4wp-error {
+  display: none;
+}
+
 /* ----- Containers ----- */
 section {
   padding-top: 128px;
@@ -9759,10 +9763,14 @@ section {
   color: #faf5f0;
 }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > li > a:hover {
+  color: #faf5f0;
+  background: #df4600;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus {
   color: #faf5f0;
   background: #bf3c00;
 }
@@ -9938,16 +9946,21 @@ section.video {
   width: 100px;
 }
 
-.form-nhojsktilm_checkbmedlemsk {
-  margin-bottom: 0;
-}
-
 .btn-tilmeld {
   background: #256956;
 }
 
 .btn-tilmeld:hover {
   background: #0e2921;
+}
+
+.tilmelding-besked {
+  padding: 16px;
+  padding: 24px;
+  color: #faf5f0;
+  background: #256956;
+  margin-bottom: 16px;
+  border-radius: 4px;
 }
 
 @media (max-width: 768px) {

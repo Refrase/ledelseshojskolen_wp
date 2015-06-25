@@ -49,11 +49,13 @@ get_header(); ?>
 
   <footer id="footer">
     <div class="container-fluid">
-      <form class="form form-newsletter form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
+      <form class="form form-newsletter form-horizontal col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3" action="http://playingfield.us11.list-manage.com/subscribe/post" method="POST">
+      	<input type="hidden" name="u" value="a39210287b24659e3e2bd0aeb">
+      	<input type="hidden" name="id" value="5593c6742d">
         <div class="form-group">
           <h2>Nyhedsbrev</h2>
           <div class="col-sm-8">
-            <input type="email" class="form-control" id="newslMail" placeholder="Mail" />
+            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
             <p class="help-block"><?php the_field( 'tekst_under_nyhedsbrev' ); ?></p>
           </div>
           <div class="col-sm-4">
