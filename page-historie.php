@@ -40,7 +40,7 @@
 					<?php if( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
 	          <div class="tl-cont <?php echo 'tl-p' . $counter .'-cont'; ?>">
-	            <div class="col-md-3">
+	            <div class="col-xs-9 col-sm-4 col-md-3">
 	              <div class="col-md-12">
 	                <h2><?php the_title(); ?></h2>
 	                <h3><?php the_field( 'sted' ); ?></br><?php the_field( 'omrade' ); ?></h3>
@@ -54,12 +54,14 @@
 	              </div>
 	            </div>
 
-	            <p class="col-md-3 tidlhojsk-beskr_bodyc">
+	            <p class="col-xs-8 col-sm-5 col-md-3 tidlhojsk-beskr_bodyc">
 								<?php the_field( 'beskrivelse' ); ?><br><br>
-	              <blockquote class="col-md-6 col-md-offset-1">
+								<div class="col-xs-12">
+	              <blockquote class="col-xs-7 col-sm-6 col-md-4 col-sm-offset-2">
 	                <p><?php the_field( 'udtalelse' ); ?></p>
-	                <cite class="tidlhojsk-beskr_citat"><?php the_field( 'kilde' ); ?></cite>
+	                <cite class="tidlhojsk-beskr_citat-kilde"><?php the_field( 'kilde' ); ?></cite>
 	              </blockquote>
+	              </div>
 	            </p>
 
 							<div class="tidlhoj-pic_overlay"></div>
@@ -75,4 +77,7 @@
 
         </article>
       </div>
+
+      <div class="tidlhoj-beskr-bg"></div>
+
     </section>

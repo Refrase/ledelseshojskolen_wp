@@ -9665,6 +9665,7 @@ blockquote {
 blockquote p {
   font-size: 1.1em;
   font-style: italic;
+  line-height: 1.4em;
 }
 
 cite {
@@ -9680,9 +9681,14 @@ cite {
   }
   h2 {
     font-size: 1.9em;
+    line-height: 1.3em;
   }
   h3 {
     font-size: 1.1em;
+    line-height: 1.3em;
+  }
+  blockquote p {
+    font-size: 0.9em;
   }
 }
 
@@ -10032,7 +10038,7 @@ section.faelskab {
   left: 0;
   background: rgba(255, 80, 0, 0.66);
   color: #faf5f0;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.2em;
   text-align: center;
   padding-top: 0;
@@ -10093,7 +10099,7 @@ section.faelskab {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   section.faelskab {
     padding-top: 150px;
   }
@@ -10132,7 +10138,7 @@ section.faelskab {
 /* ----- Tidliger Højskoler ----- */
 .tidlhoj {
   position: relative;
-  background: #faf5f0;
+  background: #32281e;
   padding-top: 96px;
   padding-top: 64px;
   padding-bottom: 64px;
@@ -10148,7 +10154,7 @@ section.faelskab {
 
 .tidlhoj-nav h1 {
   margin-bottom: -24px;
-  color: #32281e;
+  color: #faf5f0;
   width: 100%;
   text-align: center;
 }
@@ -10233,8 +10239,18 @@ section.faelskab {
 }
 
 .tidlhoj-beskr {
+  position: relative;
   padding-top: 64px;
   padding-bottom: 64px;
+}
+
+.tidlhoj-beskr-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  z-index: -100;
+  background: #3caa8c;
 }
 
 .tidlhoj-beskr h2, .tidlhoj-beskr h5, .tidlhoj-beskr p {
@@ -10276,7 +10292,9 @@ section.faelskab {
   padding-top: 128px;
 }
 
-.tidlhojsk-beskr_citat {
+.tidlhojsk-beskr_citat-kilde {
+  display: block;
+  margin-top: 8px;
   color: #ff5000;
 }
 
@@ -10299,6 +10317,28 @@ section.faelskab {
   left: 0;
   min-width: 100%;
   z-index: -10;
+}
+
+@media (max-width: 992px) {
+  .tidlhoj-pic_overlay {
+    width: calc(91.66666% - 64px);
+  }
+  .tidlhojsk-beskr_bodyc {
+    padding-top: 196px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tidlhojsk-beskr_bodyc {
+    padding-top: 32px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 440px) {
+  .tidlhoj-pic_overlay {
+    width: calc(100% - 64px);
+  }
 }
 
 /* ----- Footer ----- */
@@ -10342,7 +10382,7 @@ footer .help-block {
 
 .footer-btm li,
 .footer-btm li i,
-.footer-btm h3 {
+.footer-btm h4 {
   color: #256956;
 }
 
@@ -10350,10 +10390,9 @@ footer .help-block {
   padding-left: 32px;
 }
 
-.footer-btm-center h3 {
-  font-size: 1.5em;
+.footer-btm-center h4 {
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 
 .footer-btm-center li img {

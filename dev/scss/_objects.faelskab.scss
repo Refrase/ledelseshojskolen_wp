@@ -42,7 +42,7 @@ section.faelskab {
   top: 50px; left: 0;
   background: $clr-pri1-rgba1;
 	color: $clr-sec3;
-	font-size: $text-m;
+	font-size: $text-s;
 	line-height: 1.2em;
 	text-align: center;
 	padding-top: 0;
@@ -83,7 +83,7 @@ section.faelskab {
 	section.faelskab {
 		padding-top: 300px; }}
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 	section.faelskab {
 		padding-top: 150px; }}
 

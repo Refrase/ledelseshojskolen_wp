@@ -13,7 +13,7 @@
 
           <div class="row">
             <h4 class="col-sm-12"><?php the_field( 'grp1_titel' ); ?></h4>
-            <ul class="faelskab_billeder lh-gruppen col-md-offset-3 col-md-6">
+            <ul class="faelskab_billeder lh-gruppen col-sm-offset-1 col-sm-10">
 
 							<?php // Create array: $fields = [ 'lh_grp_medl1', 'lh_grp_medl2', ... ];
 								// Er lige nu sat til at der kan tilføjes op til 20 medlemmer i WP
@@ -41,7 +41,7 @@
 
 					<div class="row">
             <h4 class="col-sm-12"><?php the_field( 'grp2_titel' ); ?></h4>
-            <ul class="faelskab_billeder adv-board col-md-offset-3 col-md-6">
+            <ul class="faelskab_billeder adv-board col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8">
 
 							<?php // Create array: $fields = [ 'lh_grp_medl1', 'lh_grp_medl2', ... ];
 								// Er lige nu sat til at der kan tilføjes op til 20 medlemmer i WP

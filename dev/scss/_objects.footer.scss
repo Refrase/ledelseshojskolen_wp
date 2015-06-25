@@ -24,16 +24,15 @@ footer .help-block { margin-bottom: $dist-m; }
 
 .footer-btm li,
 .footer-btm li i,
-.footer-btm h3 {
+.footer-btm h4 {
 	color: $clr-pri2-sha1; }
 
 .footer-btm-left {
   padding-left: $dist-l; }
 
-.footer-btm-center h3 {
-	font-size: $text-l;
+.footer-btm-center h4 {
 	text-align: center;
-	margin-bottom: 0; }
+	margin-bottom: 4px; }
 
 .footer-btm-center li img {
 	width: 20%;

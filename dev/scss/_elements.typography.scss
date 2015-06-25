@@ -47,7 +47,8 @@ blockquote {
 
 blockquote p {
 	font-size: 1.1em;
-	font-style: italic; }
+	font-style: italic;
+	line-height: 1.4em; }
 
 cite {
 	font-weight: 300;
@@ -56,8 +57,9 @@ cite {
 
 @media (max-width: 768px) {
 	h1 { font-size: $text-xxl - 1.5em; font-weight: 600;}
-	h2 { font-size: $text-xl - 0.3em; }
-	h3 { font-size: $text-l - 0.4em; }}
+	h2 { font-size: $text-xl - 0.3em; line-height: 1.3em; }
+	h3 { font-size: $text-l - 0.4em; 	line-height: 1.3em; }
+	blockquote p { font-size: 0.9em; } }
 
 @media (max-width: 500px) {
 	h1 { font-size: $text-xxl - 2em; }}

@@ -77,7 +77,7 @@ get_header(); ?>
 
         <ul class="footer-btm-center">
           <li><img src="<?php bloginfo('template_directory'); ?>/images/icons/ic_sommerf_mgron.svg" /></li>
-          <h3>&copy; <?php echo date( 'Y' ); ?> Ledelseshøjskolen</h3>
+          <h4>&copy; <?php echo date( 'Y' ); ?> Ledelseshøjskolen</h4>
         </ul>
 
         <ul class="footer-btm-right">
