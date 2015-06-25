@@ -9957,10 +9957,17 @@ section.video {
 .tilmelding-besked {
   padding: 16px;
   padding: 24px;
-  color: #faf5f0;
-  background: #256956;
+  color: #256956;
   margin-bottom: 16px;
   border-radius: 4px;
+}
+
+button.close,
+button.close span {
+  position: absolute;
+  top: -18px;
+  right: 4px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {

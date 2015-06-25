@@ -57,10 +57,16 @@
 .tilmelding-besked { // Class added to .mc4wp-x classes in main.js
 	padding: $dist-m;
 	padding: $dist-m + $dist-s;
-	color: $clr-sec3;
-	background: $clr-pri2-sha1;
+	color: $clr-pri2-sha1;
 	margin-bottom: $dist-m;
 	border-radius: $dist-xs; }
+
+button.close,
+button.close span {
+	position: absolute;
+	top: -18px;
+	right: $dist-xs;
+	font-size: 18px; }
 
 @media (max-width: 768px) {
 	.whitebox-nhojsktilm { display: none; }

@@ -62,7 +62,11 @@ jQuery(document).ready(function($) {
 
 	// MailChimp for WP plugin: Tilmeldingsformular
 	$('.mc4wp-form').addClass('form-nhojsktilm form-horizontal');
-	$('.mc4wp-alert, .mc4wp-success').addClass('tilmelding-besked');
+	var mailChimpAlert = $('.mc4wp-alert, .mc4wp-success');
+	mailChimpAlert.addClass('tilmelding-besked alert alert-warning alert-dismissible fade in');
+	mailChimpAlert.attr( 'role', 'alert' );
+	var alertDismissBtn = $( '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>' );
+	mailChimpAlert.prepend( alertDismissBtn );
 	$('.tilmelding-besked').insertAfter('.mc4wp-form h3');
 
 	// MailChimp for WP plugin: Checkbox
