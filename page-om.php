@@ -31,8 +31,15 @@
 
             <?php the_post_thumbnail(); ?>
 
+
           </div>
         </article>
+
+           <blockquote class="hvadhvof-blockquote col-xs-9 col-xs-offset-2 col-sm-8 col-sm-offset-3 col-md-12 col-md-offset-2">
+              <p>Ledelse er at skabe følgeskab - på den gode måde.
+              Det vil sige give mod, styrke... og visdom.</p>
+              <cite>- Lukas, 12 år</cite>
+            </blockquote>
 
         <article class="row row-hvadhvof">
           <div class="col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-4 col-md-offset-1">

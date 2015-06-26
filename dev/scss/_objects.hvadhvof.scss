@@ -3,6 +3,15 @@
 .row-hvadhvof h2 {
 	color: $clr-pri1; }
 
+.hvadhvof-blockquote {
+	@include pad-top-btm($dist-l + $dist-m);
+	margin-top: $dist-l;
+	padding-left: 0; }
+
+.hvadhvof-blockquote p,
+.hvadhvof-blockquote cite {
+	color: $clr-sec2; }
+
 .btn-se_mere_her {
 	background: $clr-sec1;
 	margin-top: $dist-l;
@@ -13,4 +22,4 @@
 
 @media (max-width: 768px) {
 .row-hvadhvof_billede {
-	margin-bottom: $dist-xl; } }
+	margin-bottom: $dist-xl; }}
