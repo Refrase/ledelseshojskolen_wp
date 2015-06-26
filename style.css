@@ -9769,6 +9769,17 @@ section {
   color: #faf5f0;
 }
 
+.navbar > .container-fluid .navbar-brand {
+  font-size: 18px;
+  padding-top: 14px;
+  font-weight: 600;
+  color: #bf3c00;
+}
+
+.navbar > .container-fluid .navbar-brand:hover {
+  color: #faf5f0;
+}
+
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > li > a:hover {
   color: #faf5f0;
@@ -9884,6 +9895,16 @@ section.video {
 /* ----- Hvad & Hvorfor ----- */
 .row-hvadhvof h2 {
   color: #ff5000;
+}
+
+.btn-se_mere_her {
+  background: #32281e;
+  margin-top: 32px;
+  margin-left: -15px;
+}
+
+.btn-se_mere_her:hover {
+  background: #000000;
 }
 
 @media (max-width: 768px) {
@@ -10091,6 +10112,11 @@ section.faelskab {
 
 .btn-medlemmer:hover {
   background: #8f877f;
+}
+
+.faelskab-members {
+  margin-top: 16px;
+  text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -10356,6 +10382,7 @@ footer .form {
 footer .form h2 {
   color: #faf5f0;
   padding-left: 15px;
+  margin-bottom: 0;
 }
 
 footer .form-control {
@@ -10363,7 +10390,8 @@ footer .form-control {
 }
 
 footer .help-block {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  padding-left: 0;
 }
 
 .footer-btm {
@@ -10427,6 +10455,13 @@ footer .help-block {
 }
 
 @media (max-width: 768px) {
+  footer .form {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  footer .form:last-child {
+    padding-top: 0;
+  }
   .footer-btm {
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;

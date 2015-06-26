@@ -48,6 +48,13 @@
             <h2><?php the_field( 'title_2' ); ?></h2>
             <p><?php the_field( 'content_2' ); ?></p>
 
+            <!-- Load kun 'Se mere her', hvis der faktisk er noget at linke til -->
+            <div class="col-xs-8 col-sm-6">
+              <?php if( get_field('se_mere_her') ) { ?>
+                <a href="<?php the_field( 'se_mere_her' ); ?>" class="btn btn-default btn-se_mere_her">Se mere her</a>
+              <?php } ?>
+            </div>
+
           </div>
         </article>
       </div>

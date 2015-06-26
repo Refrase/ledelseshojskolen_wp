@@ -72,6 +72,11 @@
               <button class="btn btn-default btn-medlemmer"><?php the_field( 'medlemmer' ); ?></button>
             </div>
           </div>
+          <div class="row">
+            <div id="faelskabMembers" class="faelskab-members col-xs-6 col-xs-offset-3">
+            	<!-- Medlemmer -->
+            </div>
+          </div>
 
       </div>
     </section>

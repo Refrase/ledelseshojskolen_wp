@@ -3,6 +3,14 @@
 .row-hvadhvof h2 {
 	color: $clr-pri1; }
 
+.btn-se_mere_her {
+	background: $clr-sec1;
+	margin-top: $dist-l;
+	margin-left: -15px; }
+
+.btn-se_mere_her:hover {
+	background: $clr-sec1-sha1; }
+
 @media (max-width: 768px) {
 .row-hvadhvof_billede {
 	margin-bottom: $dist-xl; } }

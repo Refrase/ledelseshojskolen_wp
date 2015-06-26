@@ -79,6 +79,10 @@ section.faelskab {
 .btn-medlemmer:hover {
 	background: $clr-sec2-sha1; }
 
+.faelskab-members {
+	margin-top: $dist-m;
+	text-align: center; }
+
 @media (max-width: 1200px) {
 	section.faelskab {
 		padding-top: 300px; }}

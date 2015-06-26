@@ -8,11 +8,12 @@ footer .form { @include pad-top-btm($dist-xl); }
 
 footer .form h2 {
 	color: $clr-sec3;
-	padding-left: 15px; }
+	padding-left: 15px;
+	margin-bottom: 0; }
 
 footer .form-control { margin-bottom: $dist-m; }
 
-footer .help-block { margin-bottom: $dist-m; }
+footer .help-block { margin-bottom: $dist-m + $dist-s; padding-left: 0; }
 
 // Nederste del af footer
 .footer-btm {
@@ -56,6 +57,9 @@ footer .help-block { margin-bottom: $dist-m; }
 	.footer-btm-right { padding-right: 0; }}
 
 @media (max-width: 768px) {
+	footer .form { @include pad-top-btm($dist-l); }
+	footer .form:last-child { padding-top: 0; }
+
 	.footer-btm {
 		@include flex-direction(column);
 		@include align-items(center);

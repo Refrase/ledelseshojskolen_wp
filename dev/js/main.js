@@ -107,11 +107,48 @@ jQuery(document).ready(function($) {
 		$('.fa', this).animate({bottom: '-=4px'}, 400);
 	});
 
+	// Pull list of members from MailChimp list: '... Medlemskab'
+	// $( '.btn-medlemmer' ).click( function(e) {
+	// 	e.preventDefault();
+	// 	// URL
+	// 	var mailChimpListAPI = 'https://us11.api.mailchimp.com/schema/3.0/Lists/Members/Instance.json?jsoncallback=?';
+	// 	// Data
+	// 	var mcOptns = { merge_fields[2] };
+	// 	// Success
+	// 	function displayMembers(data) {
+	// 		var memberHTML = '<ul>';
+	// 		$.each( data.members, function (i, member) {
+	// 			memberHTML += '<li>';
+	// 			memberHTML += 'member.TILMFORN';
+	// 			memberHTML += '</li>';
+	// 		});
+	// 		memberHTML += '</ul>';
+	// 		$('#faelskabMembers').html( memberHTML );
+	// 	}
+	// 	// URL, data, success used in here
+	// 	$.ajax({
+	// 		type: 'GET',
+	// 		url: mailChimpListAPI,
+	// 		data: mcOptns,
+	// 		cache: false,
+	// 		dataType: 'jsonp',
+	// 		contentType: 'application/json; charset=utf-8',
+	// 		beforeSend: function (xhr) {
+	// 			xhr.setRequestHeader('Authorization', 'apikey 3d1a476aac188b529e6e1db4661f60c8-us11');
+	// 		},
+	// 		success: displayMembers,
+	// 		error: function(){
+	// 			console.log(data);
+	// 		}
+	// 	});
+	// });
 
+	// MIG -> lists/dff377c9e8/members/3e5c75018418104d0fbbebd4a53a42ad
 
-
-
-
+	// "rel": "members",
+	// "href": "https://us11.api.mailchimp.com/3.0/lists/dff377c9e8/members",
+	// "method": "GET",
+	// "targetSchema": "https://us11.api.mailchimp.com/schema/3.0/Lists/Members/Collection.json?jsoncallback=?"
 
 
 

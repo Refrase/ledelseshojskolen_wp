@@ -23,6 +23,14 @@
 .navbar-default .navbar-nav > li > a {
 	color: $clr-sec3; }
 
+.navbar > .container-fluid .navbar-brand {
+	font-size: 18px;
+	padding-top: 14px;
+	font-weight: 600;
+	color: $clr-pri1-sha1; }
+
+.navbar > .container-fluid .navbar-brand:hover { color: $clr-sec3; }
+
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > li > a:hover  {
 	color: $clr-sec3;
