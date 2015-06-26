@@ -10386,9 +10386,22 @@ footer {
   padding-bottom: 16px;
 }
 
+.footer-contact {
+  padding-top: 64px;
+}
+
 footer .form {
   padding-top: 64px;
   padding-bottom: 64px;
+}
+
+footer .form-newsletter {
+  padding-top: 32px;
+}
+
+footer h2 {
+  color: #faf5f0;
+  margin-bottom: 8px;
 }
 
 footer .form h2 {
@@ -10420,7 +10433,9 @@ footer .help-block {
   align-items: flex-end;
 }
 
+footer li,
 .footer-btm li,
+.footer-btm li strong,
 .footer-btm li i,
 .footer-btm h4 {
   color: #256956;
@@ -10471,7 +10486,7 @@ footer .help-block {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  footer .form:last-child {
+  footer .form-medlemskab {
     padding-top: 0;
   }
   .footer-btm {

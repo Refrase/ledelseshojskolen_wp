@@ -49,49 +49,57 @@ get_header(); ?>
 
   <footer id="footer">
     <div class="container-fluid">
-      <form class="form form-horizontal col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-1" action="http://playingfield.us11.list-manage.com/subscribe/post" method="POST">
-      	<input type="hidden" name="u" value="a39210287b24659e3e2bd0aeb">
-      	<input type="hidden" name="id" value="5593c6742d">
-        <div class="form-group">
-          <h2>Nyhedsbrev</h2>
-          <div class="col-xs-12 col-sm-10 col-md-9">
-          	<p class="help-block"><?php the_field( 'tekst_under_nyhedsbrev' ); ?></p>
-          </div>
-          <div class="col-sm-7 col-md-6">
-            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
-          </div>
-          <div class="col-sm-4">
-            <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
-          </div>
-        </div>
-      </form>
+    	<div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-1">
 
-      <form class="form form-horizontal col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0" action="http://playingfield.us11.list-manage.com/subscribe/post" method="POST">
-      	<input type="hidden" name="u" value="a39210287b24659e3e2bd0aeb">
-      	<input type="hidden" name="id" value="dff377c9e8">
-        <div class="form-group">
-          <h2>Medlemskab</h2>
-          <div class="col-xs-12 col-sm-10 col-md-9">
-          	<p class="help-block"><?php the_field( 'tekst_under_medlemskab' ); ?></p>
-          </div>
-          <div class="col-sm-7 col-md-6">
-            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
-          </div>
-          <div class="col-sm-4">
-            <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
-          </div>
-        </div>
-      </form>
+				<h2 class="footer-contact">Kontakt</h2>
+	      <a href="mailto:dennis.rasmussen@playingfield.dk">
+	        <li><?php the_field( 'mail' ); ?></li>
+	      </a>
+	      <li><?php the_field( 'telefon' ); ?></li>
+
+	      <form class="form form-horizontal form-newsletter" action="http://playingfield.us11.list-manage.com/subscribe/post" method="POST">
+	      	<input type="hidden" name="u" value="a39210287b24659e3e2bd0aeb">
+	      	<input type="hidden" name="id" value="5593c6742d">
+	        <div class="form-group">
+	          <h2>Nyhedsbrev</h2>
+	          <div class="col-xs-12 col-sm-10 col-md-9">
+	          	<p class="help-block"><?php the_field( 'tekst_under_nyhedsbrev' ); ?></p>
+	          </div>
+	          <div class="col-sm-7 col-md-6">
+	            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
+	          </div>
+	          <div class="col-sm-4">
+	            <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
+	          </div>
+	        </div>
+	      </form>
+	    </div>
+
+			<div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
+	      <form class="form form-horizontal form-medlemskab" action="http://playingfield.us11.list-manage.com/subscribe/post" method="POST">
+	      	<input type="hidden" name="u" value="a39210287b24659e3e2bd0aeb">
+	      	<input type="hidden" name="id" value="dff377c9e8">
+	        <div class="form-group">
+	          <h2>Medlemskab</h2>
+	          <div class="col-xs-12 col-sm-10 col-md-9">
+	          	<p class="help-block"><?php the_field( 'tekst_under_medlemskab' ); ?></p>
+	          </div>
+	          <div class="col-sm-7 col-md-6">
+	            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
+	          </div>
+	          <div class="col-sm-4">
+	            <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
+	          </div>
+	        </div>
+	      </form>
+	    </div>
 
       <ul class="footer-btm">
 
         <ul class="footer-btm-left">
+        	<li><strong><?php the_field( 'firma' ); ?></strong></li>
           <li><?php the_field( 'vej' ); ?></li>
           <li><?php the_field( 'by' ); ?></li>
-          <a href="mailto:dennis.rasmussen@playingfield.dk">
-            <li><?php the_field( 'mail' ); ?></li>
-          </a>
-          <li><?php the_field( 'telefon' ); ?></li>
         </ul>
 
         <ul class="footer-btm-center">
