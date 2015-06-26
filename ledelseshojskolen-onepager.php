@@ -49,7 +49,7 @@ get_header(); ?>
 
   <footer id="footer">
     <div class="container-fluid">
-    	<div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-1">
+    	<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-4 col-sm-offset-2">
 
 				<h2 class="footer-contact">Kontakt</h2>
 	      <a href="mailto:dennis.rasmussen@playingfield.dk">
@@ -65,17 +65,19 @@ get_header(); ?>
 	          <div class="col-xs-12 col-sm-10 col-md-9">
 	          	<p class="help-block"><?php the_field( 'tekst_under_nyhedsbrev' ); ?></p>
 	          </div>
-	          <div class="col-sm-7 col-md-6">
-	            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
-	          </div>
-	          <div class="col-sm-4">
-	            <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
+	          <div class="col-xs-12 col-sm-10">
+		          <div class="input-group">
+		            <input type="email" class="form-control form-footer-inp" name="EMAIL" id="EMAIL" placeholder="Mail" />
+		          	<span class="input-group-btn">
+		            	<button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
+		         		</span>
+		          </div>
 	          </div>
 	        </div>
 	      </form>
 	    </div>
 
-			<div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-4">
 	      <form class="form form-horizontal form-medlemskab" action="http://playingfield.us11.list-manage.com/subscribe/post" method="POST">
 	      	<input type="hidden" name="u" value="a39210287b24659e3e2bd0aeb">
 	      	<input type="hidden" name="id" value="dff377c9e8">
@@ -84,11 +86,13 @@ get_header(); ?>
 	          <div class="col-xs-12 col-sm-10 col-md-9">
 	          	<p class="help-block"><?php the_field( 'tekst_under_medlemskab' ); ?></p>
 	          </div>
-	          <div class="col-sm-7 col-md-6">
-	            <input type="email" class="form-control" name="EMAIL" id="EMAIL" placeholder="Mail" />
-	          </div>
-	          <div class="col-sm-4">
-	            <button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
+	          <div class="col-xs-12 col-sm-10">
+		          <div class="input-group">
+		            <input type="email" class="form-control form-footer-inp" name="EMAIL" id="EMAIL" placeholder="Mail" />
+		          	<span class="input-group-btn">
+		            	<button type="submit" class="btn btn-default btn-tilmeld">Tilmeld</button>
+		         		</span>
+		          </div>
 	          </div>
 	        </div>
 	      </form>
