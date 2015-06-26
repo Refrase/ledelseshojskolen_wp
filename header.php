@@ -23,6 +23,9 @@
       <p class="browsehappy">Din browser kan ikke følge med vores toptunede side! Opgradér venligst din browser <a href="http://browsehappy.com/">her</a> for at forbedre din oplevelse af internettet.</p>
     <![endif]-->
 
+  <!-- Google Analytics -->
+  <?php include_once( "analyticstracking.php" ) ?>
+
     <!--//////////////////// Navigation \\\\\\\\\\\\\\\\\\\\-->
     <header>
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
