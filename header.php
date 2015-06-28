@@ -62,7 +62,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <a class="pf-link" href="http://www.playingfield.dk">
-                  <img src="<?php bloginfo('template_directory'); ?>/images/icons/ic_sommerf_beige.svg">
+                  <img src="<?php bloginfo('template_directory'); ?>/ic/ic_sommerf_beige.svg">
                 </a>
               </li>
             </ul>
