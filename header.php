@@ -5,12 +5,12 @@
     <title><?php wp_title(); ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/ic/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="ic/touch-icon-57.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="ic/touch-icon-76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="ic/touch-icon-120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="ic/touch-icon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="ic/touch-icon-180.png">
+    <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/ic/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_directory'); ?>/ic/touch-icon-57.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_directory'); ?>/ic/touch-icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_directory'); ?>/ic/touch-icon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_directory'); ?>/ic/touch-icon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('template_directory'); ?>/ic/touch-icon-180.png">
 
     <?php wp_head(); ?>
 
