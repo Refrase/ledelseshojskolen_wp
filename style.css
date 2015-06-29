@@ -4145,7 +4145,6 @@ tbody.collapse.in {
 
 .input-group-addon,
 .input-group-btn {
-  width: 1%;
   white-space: nowrap;
   vertical-align: middle;
 }
@@ -10010,11 +10009,20 @@ button.close span {
 }
 
 @media (max-width: 768px) {
+  .row-nhojsktilm_intro {
+    padding-bottom: 128px;
+  }
   .whitebox-nhojsktilm {
     display: none;
   }
   .nhojsktilm_tilm {
     top: 780px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nhojsktilm_tilm {
+    top: 860px;
   }
 }
 
@@ -10160,6 +10168,12 @@ section.faelskab {
 @media (max-width: 480px) {
   section.faelskab {
     margin-top: 900px;
+  }
+}
+
+@media (max-width: 400px) {
+  section.faelskab {
+    margin-top: 1000px;
   }
 }
 
