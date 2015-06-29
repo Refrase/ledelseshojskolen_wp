@@ -82,30 +82,18 @@ section.faelskab {
 	margin-top: $dist-m;
 	text-align: center; }
 
-@media (max-width: 1200px) {
-	section.faelskab {
-		padding-top: 300px; }}
-
-@media (max-width: 991px) {
-	section.faelskab {
-		padding-top: 150px; }}
-
-@media (max-width: 960px) {
-	section.faelskab {
-		padding-top: 300px; }}
-
 @media (max-width: 768px) {
 	section.faelskab {
-		padding-top: 1100px; }}
+		margin-top: 850px; }}
 
 @media (max-width: 640px) {
 	section.faelskab {
-		padding-top: 1100px; }}
+		margin-top: 800px; }}
 
 @media (max-width: 520px) {
 	section.faelskab {
-		padding-top: 1150px; }}
+		margin-top: 850px; }}
 
 @media (max-width: 480px) {
 	section.faelskab {
-		padding-top: 1200px; }}
+		margin-top: 900px; }}
