@@ -24,9 +24,9 @@
             <svg height="80" width="100%">
               <line class="tl-streg" x1="0" y1="50%" x2="50%" y2="50%"></line>
               <line class="tl-streg" x1="50%" y1="50%" x2="70%" y2="50%" stroke-dasharray="8,8"></line>
-              <circle class="tl-punkt" id="tl-p1" cx="30%" cy="50%"></circle>
-              <circle class="tl-punkt" id="tl-p2" cx="50%" cy="50%"></circle>
-              <circle class="tl-punkt" id="tl-p3" cx="70%" cy="50%"></circle>
+              <circle class="tl-punkt" id="tl-p1" cx="30%" cy="50%" r="10"></circle>
+              <circle class="tl-punkt" id="tl-p2" cx="50%" cy="50%" r="10"></circle>
+              <circle class="tl-punkt" id="tl-p3" cx="70%" cy="50%" r="10"></circle>
             </svg>
           </div>
 

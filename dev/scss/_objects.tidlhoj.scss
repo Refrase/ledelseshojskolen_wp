@@ -7,9 +7,6 @@
 	padding-top: $dist-xl + $dist-l;
 	@include pad-top-btm($dist-xl); }
 
-.tidlhoj-beskr {
-	position: relative; }
-
 .tidlhoj-nav {
 	margin-bottom: $dist-l; }
 
@@ -47,6 +44,7 @@
 
 // Beskrivelse af enkelt tidligere højskole
 .tidlhoj-beskr {
+	overflow: hidden;
 	position: relative;
 	@include pad-top-btm($dist-xl); }
 
