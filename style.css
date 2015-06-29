@@ -10539,3 +10539,8 @@ a.btn {
 html {
   overflow-x: hidden;
 }
+
+body {
+  overflow: hidden;
+  overflow-y: auto;
+}

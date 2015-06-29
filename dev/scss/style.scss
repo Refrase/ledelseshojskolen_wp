@@ -56,3 +56,7 @@ $grid-float-breakpoint: 798px; // Point for the navbar to put links into collaps
 
 html {
 	overflow-x: hidden; }
+
+body {
+	overflow: hidden;
+  overflow-y: auto; }
