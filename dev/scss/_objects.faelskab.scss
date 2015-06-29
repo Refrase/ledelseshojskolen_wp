@@ -12,8 +12,8 @@ section.faelskab {
 	text-align: center; }
 
 .faelskab_billeder {
-	display: flex;
-	justify-content: center;
+	@include display(flex);
+	@include justify-content(center);
 	margin-bottom: $dist-l; }
 
 .faelskab_billeder li:first-child,

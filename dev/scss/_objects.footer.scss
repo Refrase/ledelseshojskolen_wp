@@ -27,7 +27,7 @@ footer .help-block { margin-bottom: $dist-m + $dist-s; padding-left: 0; }
 .footer-btm {
 	padding: $dist-m;
 	width: 100%;
-	display: flex;
+	@include display(flex);
 	@include justify-content(space-between);
 	@include align-items(flex-end); }
 
@@ -51,7 +51,7 @@ footer li,
 	margin-bottom: $dist-m; }
 
 .footer-btm-right {
-	display: flex;
+	@include display(flex);
 	padding-right: $dist-l; }
 
 .footer-btm-right li {

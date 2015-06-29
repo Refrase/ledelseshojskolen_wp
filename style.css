@@ -10034,7 +10034,16 @@ section.faelskab {
 }
 
 .faelskab_billeder {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
   margin-bottom: 32px;
 }
@@ -10418,6 +10427,12 @@ footer .help-block {
 .footer-btm {
   padding: 16px;
   width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
@@ -10453,6 +10468,12 @@ footer li,
 }
 
 .footer-btm-right {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
   padding-right: 32px;
 }
