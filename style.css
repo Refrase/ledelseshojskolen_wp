@@ -9685,7 +9685,6 @@ cite {
   h3 {
     font-size: 1.2em;
     line-height: 1.3em;
-    font-weight: 600;
   }
   h4 {
     font-size: 1em;
@@ -9968,11 +9967,8 @@ section.video {
 }
 
 .form-nhojsktilm h3 {
-  margin-bottom: 16px;
-}
-
-.form-nhojsktilm h3 {
   color: #faf5f0;
+  margin-bottom: 16px;
 }
 
 .form-nhojsktilm label {
@@ -10027,6 +10023,9 @@ button.close span {
   }
   .nhojsktilm_tilm {
     top: 780px;
+  }
+  .form-nhojsktilm h3 {
+    font-size: 2.2em;
   }
 }
 
@@ -10159,19 +10158,21 @@ section.faelskab {
 
 @media (max-width: 768px) {
   section.faelskab {
-    margin-top: 850px;
+    padding-top: 100px;
+    margin-top: 900px;
   }
 }
 
 @media (max-width: 640px) {
   section.faelskab {
+    padding-top: 200px;
     margin-top: 800px;
   }
 }
 
 @media (max-width: 520px) {
   section.faelskab {
-    margin-top: 850px;
+    margin-top: 750px;
   }
 }
 
@@ -10183,6 +10184,7 @@ section.faelskab {
 
 @media (max-width: 400px) {
   section.faelskab {
+    padding-top: 100px;
     margin-top: 1000px;
   }
 }

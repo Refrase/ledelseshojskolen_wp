@@ -84,15 +84,17 @@ section.faelskab {
 
 @media (max-width: 768px) {
 	section.faelskab {
-		margin-top: 850px; }}
+		padding-top: 100px;
+		margin-top: 900px; }}
 
 @media (max-width: 640px) {
 	section.faelskab {
+		padding-top: 200px;
 		margin-top: 800px; }}
 
 @media (max-width: 520px) {
 	section.faelskab {
-		margin-top: 850px; }}
+		margin-top: 750px; }}
 
 @media (max-width: 480px) {
 	section.faelskab {
@@ -100,4 +102,5 @@ section.faelskab {
 
 @media (max-width: 400px) {
 	section.faelskab {
+		padding-top: 100px;
 		margin-top: 1000px; }}

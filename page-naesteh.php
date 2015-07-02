@@ -10,8 +10,8 @@
     	<div class="whitebox-nhojsktilm"></div>
       <div class="container">
         <article class="row row-nhojsktilm row-nhojsktilm_intro">
-          <div class="col-sm-5">
-            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-10">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-5">
+            <div class="col-sm-10">
 	            <h2><?php the_title(); ?></h2>
 	            <p><?php the_content(); ?></p>
 
@@ -27,13 +27,13 @@
             </div>
 
 						<!-- Load kun program, hvis der faktisk er et at linke til -->
-            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-4">
+            <div class="col-xs-6 col-sm-5">
             	<?php if( get_field('program') ) { ?>
               	<a href="<?php the_field( 'program' ); ?>" class="btn btn-default btn-program">Program</a>
               <?php } ?>
             </div>
 
-            <div class="col-xs-offset-1 col-sm-offset-0 col-sm-12">
+            <div class="col-xs-7 col-sm-12">
 	            <?php $image = get_field( 'logo' ); ?>
 	            <?php if( !empty($image) ) { ?>
 	              <img class="logo-nhojsktilm" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />

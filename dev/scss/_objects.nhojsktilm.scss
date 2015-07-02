@@ -27,10 +27,9 @@
 	padding-top: $dist-xl;
 	padding-bottom: $dist-xl; }
 
-.form-nhojsktilm h3 { margin-bottom: $dist-m; }
-
 .form-nhojsktilm h3 {
-	color: $clr-sec3; }
+	color: $clr-sec3;
+	margin-bottom: $dist-m; }
 
 .form-nhojsktilm label {
 	color: $clr-sec3; }
@@ -71,7 +70,8 @@ button.close span {
 @media (max-width: 768px) {
 	.row-nhojsktilm_intro { padding-bottom: $dist-xxl; }
 	.whitebox-nhojsktilm { display: none; }
-	.nhojsktilm_tilm { top: 780px; }}
+	.nhojsktilm_tilm { top: 780px; }
+	.form-nhojsktilm h3 { font-size: $text-xl; } }
 
 @media (max-width: 480px) {
 	.nhojsktilm_tilm { top: 860px; }}
