@@ -9946,6 +9946,7 @@ section.video {
 
 .row-nhojsktilm_intro h3 {
   margin-top: 32px;
+  font-weight: 600;
 }
 
 .whitebox-nhojsktilm {
@@ -9999,9 +10000,14 @@ section.video {
 }
 
 .tilmelding-besked {
+  position: fixed;
+  top: 306px;
+  right: 32px;
+  background: #32281e;
+  color: #faf5f0;
+  z-index: 110;
   padding: 16px;
   padding: 24px;
-  color: #256956;
   margin-bottom: 16px;
   border-radius: 4px;
 }
@@ -10009,9 +10015,12 @@ section.video {
 button.close,
 button.close span {
   position: absolute;
+  color: #faf5f0;
+  opacity: 1;
   top: -18px;
   right: 4px;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -10025,7 +10034,10 @@ button.close span {
     top: 780px;
   }
   .form-nhojsktilm h3 {
-    font-size: 2.2em;
+    font-size: 1.5em;
+  }
+  .row-nhojsktilm_intro h3 {
+    font-size: 1.2em;
   }
 }
 
@@ -10244,72 +10256,15 @@ section.faelskab {
 
 .tl-punkt {
   fill: #faf5f0;
+  stroke: #faf5f0;
   cursor: pointer;
-  r: 10;
-  -webkit-animation: transl 4s ease-in infinite;
-  -moz-animation: transl 4s ease-in infinite;
-  animation: transl 4s ease-in infinite;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .tl-punkt:hover {
-  -webkit-animation: 0;
-  -moz-animation: 0;
-  animation: 0;
-  r: 14;
-}
-
-@-webkit-keyframes transl {
-  0% {
-    r: 10;
-  }
-  25% {
-    r: 12;
-  }
-  50% {
-    r: 10;
-  }
-  75% {
-    r: 8;
-  }
-  100% {
-    r: 10;
-  }
-}
-
-@-moz-keyframes transl {
-  0% {
-    r: 10;
-  }
-  25% {
-    r: 12;
-  }
-  50% {
-    r: 10;
-  }
-  75% {
-    r: 8;
-  }
-  100% {
-    r: 10;
-  }
-}
-
-@keyframes transl {
-  0% {
-    r: 10;
-  }
-  25% {
-    r: 12;
-  }
-  50% {
-    r: 10;
-  }
-  75% {
-    r: 8;
-  }
-  100% {
-    r: 10;
-  }
+  r: 12;
 }
 
 .tl-streg {
@@ -10322,6 +10277,10 @@ section.faelskab {
   position: relative;
   padding-top: 64px;
   padding-bottom: 64px;
+}
+
+.row-tidlhoj-beskr {
+  min-height: 720px;
 }
 
 .tidlhoj-beskr-bg {

@@ -22,21 +22,11 @@
 
 .tl-punkt {
 	fill: $clr-sec3;
+	stroke: $clr-sec3;
   cursor: pointer;
-  r: 10;
-  @include animation(transl 4s ease-in infinite); // Call for action [Bourbon]
-  }
+  @include transition(all 0.1s ease-in); }
 
-.tl-punkt:hover {
-	@include animation(0);
-	r: 14; }
-
-@include keyframes(transl) { // [Bourbon]
-    0% 		{ r: 10; }
-   	25% 	{ r: 12; }
-    50% 	{ r: 10; }
-    75% 	{ r: 8; }
-    100% 	{ r: 10; } }
+.tl-punkt:hover { r: 12; }
 
 .tl-streg {
 	stroke: $clr-sec3;
@@ -47,6 +37,8 @@
 	overflow: hidden;
 	position: relative;
 	@include pad-top-btm($dist-xl); }
+
+.row-tidlhoj-beskr { min-height: 720px; }
 
 .tidlhoj-beskr-bg {
 	position: absolute;

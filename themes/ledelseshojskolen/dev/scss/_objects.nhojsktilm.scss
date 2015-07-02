@@ -9,7 +9,8 @@
 	padding-bottom: $dist-xl; }
 
 .row-nhojsktilm_intro h3 {
-	margin-top: $dist-l; }
+	margin-top: $dist-l;
+	font-weight: 600; }
 
 .whitebox-nhojsktilm {
 	position: absolute;
@@ -54,24 +55,33 @@
 
 // MailChimp for WP-plugin
 .tilmelding-besked { // Class added to .mc4wp-x classes in main.js
+	position: fixed;
+	top: 50px + $dist-xxl + $dist-xxl; // Navbar height = 50px
+	right: $dist-l;
+	background: $clr-sec1;
+	color: $clr-sec3;
+	z-index: 110;
 	padding: $dist-m;
 	padding: $dist-m + $dist-s;
-	color: $clr-pri2-sha1;
 	margin-bottom: $dist-m;
 	border-radius: $dist-xs; }
 
 button.close,
 button.close span {
 	position: absolute;
+	color: $clr-sec3;
+	opacity: 1;
 	top: -18px;
 	right: $dist-xs;
-	font-size: 18px; }
+	font-size: 14px;
+	font-weight: 400; }
 
 @media (max-width: 768px) {
 	.row-nhojsktilm_intro { padding-bottom: $dist-xxl; }
 	.whitebox-nhojsktilm { display: none; }
 	.nhojsktilm_tilm { top: 780px; }
-	.form-nhojsktilm h3 { font-size: $text-xl; } }
+	.form-nhojsktilm h3 { font-size: $text-l; }
+	.row-nhojsktilm_intro h3 { font-size: 1.2em; } }
 
 @media (max-width: 480px) {
 	.nhojsktilm_tilm { top: 860px; }}

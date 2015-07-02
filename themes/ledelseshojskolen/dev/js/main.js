@@ -62,12 +62,12 @@ jQuery(document).ready(function($) {
 
 	// MailChimp for WP plugin: Tilmeldingsformular
 	$('.mc4wp-form').addClass('form-nhojsktilm form-horizontal');
+	// Make mc4wp-alert dismissible with Bootstrap classes
 	var mailChimpAlert = $('.mc4wp-alert, .mc4wp-success');
-	mailChimpAlert.addClass('tilmelding-besked alert alert-warning alert-dismissible fade in');
+	mailChimpAlert.addClass('tilmelding-besked alert alert-dismissible fade in');
 	mailChimpAlert.attr( 'role', 'alert' );
 	var alertDismissBtn = $( '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>' );
 	mailChimpAlert.prepend( alertDismissBtn );
-	$('.tilmelding-besked').insertAfter('.mc4wp-form h3');
 
 	// MailChimp for WP plugin: Checkbox
 	// Hidden inputs take on value of visible inputs, for the mc4wp-plugins checkbox functionality to work (subscription to an additional list (here: Medlemskab)). Hidden inputs created in form-markup in the Mailchimp for WP plugin in wp-admin.
@@ -78,9 +78,14 @@ jQuery(document).ready(function($) {
 	$('#TILMBESK').change(function() { $('#mc4wp-TILMBESK').val( $('#TILMBESK').val() ); });
 
 	// Timeline (tidlhoj)
+	// Load acitve farve på nr. 2 prik
+	$('#tl-p2').css({ fill: '#32281e' });
+
 	$('.tl-punkt').click(function() {
    	// Hide/show relevant indhold
    	// Hent id på på prik der trykkes på
+   	$('.tl-punkt').css({ fill: '#faf5f0' });
+   	$(this).css({ fill: '#32281e' });
    	var clickedId = $(this).attr('id');
    	// Skjul alle content blokke
    	var tlpContAll = $('.tl-cont, .tidlhoj-pic_overlay');
