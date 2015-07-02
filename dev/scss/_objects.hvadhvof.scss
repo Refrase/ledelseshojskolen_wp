@@ -8,6 +8,10 @@
 	margin-top: $dist-l;
 	padding-left: 0; }
 
+.hvadhvof-blockquote p {
+	font-size: $text-l;
+	font-weight: 600; }
+
 .hvadhvof-blockquote p,
 .hvadhvof-blockquote cite {
 	color: $clr-sec2; }
@@ -22,4 +26,4 @@
 
 @media (max-width: 768px) {
 .row-hvadhvof_billede {
-	margin-bottom: $dist-xl; }}
+	margin-bottom: $dist-xl; } }
