@@ -41,10 +41,10 @@
 
 					<div class="row">
             <h4 class="col-sm-12"><?php the_field( 'grp2_titel' ); ?></h4>
-            <ul class="faelskab_billeder adv-board col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8">
+            <ul class="faelskab_billeder adv-board col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
 
-							<?php // Create array: $fields = [ 'lh_grp_medl1', 'lh_grp_medl2', ... ];
-								// Er lige nu sat til at der kan tilføjes op til 20 medlemmer i WP
+							<?php // Create array: $fields = [ 'adv_brd_medl1', 'adv_brd_medl2', ... ];
+								// Er lige nu sat til (i loopet herunder) at der kan tilføjes op til 20 medlemmer i WP
 								$fields_ab = [];
 								for ( $i = 1; $i < 20; $i++ ) {
 									$field = 'adv_brd_medl' . $i;
@@ -58,8 +58,11 @@
 									$member = get_field( $fields_ab[$i] );
 									if ( $member ) {
 										array_push($members_ab, $member); ?>
-										<li>
+										<li class="adv-board_medlem">
 											<img src="<?php echo $members_ab[$i]['url']; ?>" alt="<?php echo $members_ab[$i]['alt']; ?>" />
+											<p class="adv-board_medlem-navn"><b><?php the_field( 'navn_ab_medl' . $i ); ?></b></p>
+											<p class="adv-board_medlem-meta"><?php the_field( 'titel_ab_medl' . $i ); ?></p>
+											<p class="adv-board_medlem-meta"><?php the_field( 'organisation_ab_medl' . $i ); ?></p>
 										</li> <?php
 								  }
 								} ?>

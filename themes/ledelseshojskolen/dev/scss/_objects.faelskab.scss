@@ -48,7 +48,7 @@ section.faelskab {
   opacity: 0;
   transition: all 0.5s; }
 
-.faelskab_billeder li:hover:after {
+.lh-gruppen li:hover:after {
   opacity: 1;
   top: 0;
   padding-top: 60%; }
@@ -64,12 +64,17 @@ section.faelskab {
 .lh-gruppen li:nth-child(5):after {
 	content: 'Carsten\A Reves'; }
 
-.adv-board li:nth-child(1):after {
-	content: 'Ole\A Pedersen'; }
-.adv-board li:nth-child(2):after {
-	content: 'Lisbet\A Lentz'; }
-.adv-board li:nth-child(3):after {
-	content: 'Lars\A Holten'; }
+.adv-board_medlem {
+	width: 32%;
+  height: auto; }
+
+.adv-board_medlem:nth-child(1) { text-align: left; }
+.adv-board_medlem:nth-child(2) { text-align: center; }
+.adv-board_medlem:nth-child(3) { text-align: right; }
+
+.adv-board_medlem p { color: $clr-sec2; }
+.adv-board_medlem-navn { padding-top: $dist-s; }
+.adv-board_medlem-meta { font-size: $text-xs; }
 
 .btn-medlemmer {
 	margin-top: $dist-l;
@@ -82,10 +87,16 @@ section.faelskab {
 	margin-top: $dist-m;
 	text-align: center; }
 
+@media (min-width: 1200px) {
+	.adv-board_medlem {
+		width: 26%; } }
+
 @media (max-width: 768px) {
 	section.faelskab {
 		padding-top: 100px;
-		margin-top: 900px; }}
+		margin-top: 900px; }
+	.adv-board_medlem {
+		width: 26%; } }
 
 @media (max-width: 640px) {
 	section.faelskab {
@@ -98,7 +109,9 @@ section.faelskab {
 
 @media (max-width: 480px) {
 	section.faelskab {
-		margin-top: 900px; }}
+		margin-top: 900px; }
+	.adv-board_medlem {
+		width: 32%; } }
 
 @media (max-width: 400px) {
 	section.faelskab {

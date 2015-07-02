@@ -7,8 +7,8 @@ module.exports = function(grunt) {
 
 		uglify: {
 			build: {
-				src: 'dev/js/*.js',
-				dest: 'js/main.min.js'
+				src: 'themes/ledelseshojskolen/dev/js/*.js',
+				dest: 'themes/ledelseshojskolen/js/main.min.js'
 			},
 			dev: {
 				options: {
@@ -17,8 +17,8 @@ module.exports = function(grunt) {
 					compress: false,
 					preserveComments: 'all'
 				},
-				src: 'dev/js/*.js',
-				dest: 'js/main.min.js'
+				src: 'themes/ledelseshojskolen/dev/js/*.js',
+				dest: 'themes/ledelseshojskolen/js/main.min.js'
 			}
 		},
 
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 					outputStyle: 'expanded' // 'expanded' = makes the output .css-file easy to read
 				},
 				files: {
-					'style.css': 'dev/scss/style.scss'
+					'themes/ledelseshojskolen/style.css': 'themes/ledelseshojskolen/dev/scss/style.scss'
 				}
 			},
 			build: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed' // 'compressed' = minifies the output for live server
 				},
 				files: {
-					'style.css': 'dev/scss/style.scss'
+					'themes/ledelseshojskolen/style.css': 'themes/ledelseshojskolen/dev/scss/style.scss'
 				}
 			}
 		},
@@ -48,15 +48,15 @@ module.exports = function(grunt) {
         livereload: true,
       },
 			js: {
-				files: [ 'dev/js/*.js' ],
+				files: [ 'themes/ledelseshojskolen/dev/js/*.js' ],
 				tasks: [ 'uglify:dev' ] // Concatenate scripts on change, but don't minify while developing (see options under 'uglify' ^)
 			},
 			css: {
-				files: [ 'dev/scss/**/*.scss' ],
+				files: [ 'themes/ledelseshojskolen/dev/scss/**/*.scss' ],
 				tasks: [ 'sass:dev' ] // Concatenate styles on change, but don't minify while developing (see options under 'sass' ^)
 			},
       livereload: {
-        files: [ '*.html', '*.php', 'images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+        files: [ 'themes/ledelseshojskolen/*.html', 'themes/ledelseshojskolen/*.php', 'themes/ledelseshojskolen/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
       }
 		}
 
