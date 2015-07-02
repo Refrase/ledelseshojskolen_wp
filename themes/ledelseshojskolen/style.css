@@ -9867,8 +9867,8 @@ section {
 }
 
 .row-intro h1 {
-  letter-spacing: 1px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .row-intro h3 {
