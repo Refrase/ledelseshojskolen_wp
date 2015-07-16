@@ -30,8 +30,14 @@
 									$member = get_field( $fields_lh[$i] );
 									if ( $member ) {
 										array_push($members_lh, $member); ?>
-										<li>
+										<li class="lh-grp_medlem">
 											<img src="<?php echo $members_lh[$i]['url']; ?>" alt="<?php echo $members_lh[$i]['alt']; ?>" />
+											<div class="lh-grp_medlem-meta">
+												<p class="lh-grp_medlem-fornavn"><?php the_field( 'fornavn_lhg_medl' . $i ); ?></p>
+												<p class="lh-grp_medlem-efternavn"><?php the_field( 'efternavn_lhg_medl' . $i ); ?></p>
+												<p class="lh-grp_medlem-titel"><?php the_field( 'titel_lhg_medl' . $i ); ?></p>
+												<p class="lh-grp_medlem-org"><?php the_field( 'organisation_lhg_medl' . $i ); ?></p>
+											</div>
 										</li> <?php
 								  }
 								} ?>
@@ -60,9 +66,12 @@
 										array_push($members_ab, $member); ?>
 										<li class="adv-board_medlem">
 											<img src="<?php echo $members_ab[$i]['url']; ?>" alt="<?php echo $members_ab[$i]['alt']; ?>" />
-											<p class="adv-board_medlem-navn"><b><?php the_field( 'navn_ab_medl' . $i ); ?></b></p>
-											<p class="adv-board_medlem-meta"><?php the_field( 'titel_ab_medl' . $i ); ?></p>
-											<p class="adv-board_medlem-meta"><?php the_field( 'organisation_ab_medl' . $i ); ?></p>
+											<div class="adv-board_medlem-meta">
+												<p class="adv-board_medlem-fornavn"><?php the_field( 'fornavn_ab_medl' . $i ); ?></p>
+												<p class="adv-board_medlem-efternavn"><?php the_field( 'efternavn_ab_medl' . $i ); ?></p>
+												<p class="adv-board_medlem-titel"><?php the_field( 'titel_ab_medl' . $i ); ?></p>
+												<p class="adv-board_medlem-org"><?php the_field( 'organisation_ab_medl' . $i ); ?></p>
+											</div>
 										</li> <?php
 								  }
 								} ?>

@@ -77,6 +77,25 @@ jQuery(document).ready(function($) {
 	$('#TILMORG').change(function() { $('#mc4wp-TILMORG').val( $('#TILMORG').val() ); });
 	$('#TILMBESK').change(function() { $('#mc4wp-TILMBESK').val( $('#TILMBESK').val() ); });
 
+	/* ----- Fællesskabet ----- */
+
+	// Fade info om medlem ind, når musen holdes over (fade ud når den fjernes)
+	var showMemberInfo = function( group, meta ) {
+		$( document ).on({
+			mouseenter: function() {
+				$( meta, this ).stop().fadeIn();
+			},
+			mouseleave: function() {
+				$( meta, this ).stop().fadeOut();
+			}
+		}, group);
+	}
+
+	showMemberInfo( '.adv-board_medlem', '.adv-board_medlem-meta' );
+	showMemberInfo( '.lh-grp_medlem', '.lh-grp_medlem-meta' );
+
+	/* ----- / Fællesskabet ----- */
+
 	// Timeline (tidlhoj)
 	// Load acitve farve på nr. 2 prik
 	$('#tl-p2').css({ fill: '#32281e' });

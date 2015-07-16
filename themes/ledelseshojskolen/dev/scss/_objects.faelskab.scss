@@ -48,33 +48,40 @@ section.faelskab {
   opacity: 0;
   transition: all 0.5s; }
 
-.lh-gruppen li:hover:after {
+.faelskab_billeder li:hover:after {
   opacity: 1;
   top: 0;
   padding-top: 60%; }
 
-.lh-gruppen li:nth-child(1):after {
-	content: 'Dennis\A Rasmussen'; }
-.lh-gruppen li:nth-child(2):after {
-	content: 'Claus\A Dahl'; }
-.lh-gruppen li:nth-child(3):after {
-	content: 'Ole\A Dissing'; }
-.lh-gruppen li:nth-child(4):after {
-	content: 'Jens\A Larsen'; }
-.lh-gruppen li:nth-child(5):after {
-	content: 'Carsten\A Reves'; }
+.lh-grp_medlem-meta,
+.adv-board_medlem-meta {
+	display: none;
+	z-index: 100;
+	position: absolute;
+	width: 70%;
+	left: 15%;
+	top: 20%;
+  text-align: center; }
 
-.adv-board_medlem {
-	width: 32%;
-  height: auto; }
+.lh-grp_medlem-fornavn,
+.lh-grp_medlem-efternavn,
+.adv-board_medlem-fornavn,
+.adv-board_medlem-efternavn {
+	font-size: $text-m;
+	color: $clr-sec3;
+	line-height: $text-m; }
 
-.adv-board_medlem:nth-child(1) { text-align: left; }
-.adv-board_medlem:nth-child(2) { text-align: center; }
-.adv-board_medlem:nth-child(3) { text-align: right; }
+.lh-grp_medlem-efternavn,
+.adv-board_medlem-efternavn {
+	padding-bottom: $dist-s; }
 
-.adv-board_medlem p { color: $clr-sec2; }
-.adv-board_medlem-navn { padding-top: $dist-s; }
-.adv-board_medlem-meta { font-size: $text-xs; }
+.lh-grp_medlem-titel,
+.lh-grp_medlem-org,
+.adv-board_medlem-titel,
+.adv-board_medlem-org {
+	color: $clr-sec3;
+	line-height: $text-l;
+	font-size: $text-xs; }
 
 .btn-medlemmer {
 	margin-top: $dist-l;
@@ -105,7 +112,15 @@ section.faelskab {
 
 @media (max-width: 520px) {
 	section.faelskab {
-		margin-top: 750px; }}
+		margin-top: 750px; }
+	.lh-grp_medlem-meta,
+	.adv-board_medlem-meta {
+		top: 8%; }
+	.lh-grp_medlem-fornavn,
+	.lh-grp_medlem-efternavn,
+	.adv-board_medlem-fornavn,
+	.adv-board_medlem-efternavn {
+		font-size: $text-s; }}
 
 @media (max-width: 480px) {
 	section.faelskab {
